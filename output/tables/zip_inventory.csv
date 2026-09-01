@@ -1,0 +1,17 @@
+zip,member,compressed_bytes,uncompressed_bytes,n_fields,header_fingerprint,first_fields
+2018_Business_FullFile_QCQ.zip,2018_Business_FullFile_QCQ-A.TXT,914228832,4205986892,89,9fe066dec059,First Name | Last Name | Company
+2018_Business_FullFile_QCQ.zip,2018_Business_FullFile_QCQ-B.TXT,867898281,4005400173,89,9fe066dec059,First Name | Last Name | Company
+2019_Business_FullFile_QCQ.zip,2019_Business_FullFile_QCQ-A.TXT,972189286,4484682035,89,9fe066dec059,First Name | Last Name | Company
+2019_Business_FullFile_QCQ.zip,2019_Business_FullFile_QCQ-B.TXT,893123984,4102106848,89,9fe066dec059,First Name | Last Name | Company
+2020_Business_FullFile_QCQ.zip,2020_Business_FullFile_QCQ-A.txt,1147778964,4495190699,89,9fe066dec059,First Name | Last Name | Company
+2020_Business_FullFile_QCQ.zip,2020_Business_FullFile_QCQ-B.txt,1060868288,4104056429,89,9fe066dec059,First Name | Last Name | Company
+2021_Business_FullFile_QCQ.zip,2021_Business_FullFile_QCQ-A.txt,1014735029,4617830457,89,9fe066dec059,FIRST NAME | LAST NAME | COMPANY
+2021_Business_FullFile_QCQ.zip,2021_Business_FullFile_QCQ-B.txt,1187575564,4221191127,89,9fe066dec059,FIRST NAME | LAST NAME | COMPANY
+2022_Business_FullFile_QCQ.zip,2022_Business_FullFile_QCQ-A.txt,1318429346,4869228949,89,9fe066dec059,FIRST NAME | LAST NAME | COMPANY
+2022_Business_FullFile_QCQ.zip,2022_Business_FullFile_QCQ-B.txt,1209363983,4462219280,89,9fe066dec059,FIRST NAME | LAST NAME | COMPANY
+2023_Business_FullFile_QCQ.zip,2023_Business_FullFile_QCQ-A.txt,1438284205,5053922094,89,9fe066dec059,FIRST NAME | LAST NAME | COMPANY
+2023_Business_FullFile_QCQ.zip,2023_Business_FullFile_QCQ-B.txt,1327767477,4648599672,89,9fe066dec059,FIRST NAME | LAST NAME | COMPANY
+2024_Business_Fullfile_QCQ.zip,2024_Business_FullFile_QCQ-A.txt,1459462198,5237338859,89,9fe066dec059,FIRST NAME | LAST NAME | COMPANY
+2024_Business_Fullfile_QCQ.zip,2024_Business_FullFile_QCQ-B.txt,1355969845,4860994460,89,9fe066dec059,FIRST NAME | LAST NAME | COMPANY
+2025_Business_FullFile_QCQ.zip,2025_Business_FullFile_QCQ-A.txt,1449456561,5221550556,89,9fe066dec059,FIRST NAME | LAST NAME | COMPANY
+2025_Business_FullFile_QCQ.zip,2025_Business_FullFile_QCQ-B.txt,1361981486,4914869745,89,9fe066dec059,FIRST NAME | LAST NAME | COMPANY
