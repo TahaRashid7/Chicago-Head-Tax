@@ -1,0 +1,9 @@
+﻿data/
+*.parquet
+*.txt
+*.zip
+.env
+output/logs/
+output/figures/*.png
+.ipynb_checkpoints/
+__pycache__/
