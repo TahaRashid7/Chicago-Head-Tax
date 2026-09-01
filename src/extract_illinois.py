@@ -140,16 +140,30 @@ def extract_year(year: int, limit_chunks: int | None = None) -> pd.DataFrame:
 
 
 def clean(df: pd.DataFrame) -> pd.DataFrame:
-    """Apply the recodes the QC memo established, and nothing else."""
-    df = df.replace("", pd.NA)
+    """Apply the recodes the QC memo established, and nothing else.
 
+    Order matters: the zero-sentinel recode runs while every cell is still a
+    string, so the mask cannot contain nulls. Blanks become NA afterwards.
+    """
     for col in ZERO_IS_MISSING:
-        if col in df.columns:
-            before = (df[col] == "0").sum()
-            df.loc[df[col] == "0", col] = pd.NA
-            print(f"  {col}: recoded {before:,} zeros to null (0 means missing)")
+        if col not in df.columns:
+            raise KeyError(
+                f"{col} not in columns -- recode would silently no-op. "
+                f"Available: {[c for c in df.columns if 'size' in c]}"
+            )
+        # Missing is a zero sentinel of unspecified width: "0", "00000", etc.
+        is_missing = (df[col].str.strip()
+                             .str.fullmatch(r"0+")
+                             .fillna(False)
+                             .astype(bool))
+        n = int(is_missing.sum())
+        df.loc[is_missing, col] = ""
+        print(f"  {col}: recoded {n:,} zero-sentinel values to null "
+              f"({n / len(df) * 100:.2f}% of rows)")
 
+    df = df.replace("", pd.NA)
     return df
+
 
 
 def verify(df: pd.DataFrame, year: int) -> None:
