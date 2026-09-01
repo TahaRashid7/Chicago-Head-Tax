@@ -43,11 +43,11 @@ METRICS = TABLES / "year_metrics.csv"
 
 EMP = "employee_size_5_location"
 
-# Comparison window for the spike ratio. Deliberately excludes 45 and 55,
-# which are themselves round-number attractors.
-LOW_WINDOW = [46, 47, 48, 49]
-HIGH_WINDOW = [51, 52, 53, 54]
-WINDOW_500 = [496, 497, 498, 499, 501, 502, 503, 504]
+
+# 50 was the statutory threshold. 40 and 60 are placebos: round numbers that
+# attract the same self-reporting behaviour but were never tax-relevant.
+# 500 is the threshold in current proposals.
+THRESHOLDS = [40, 50, 60, 500]
 
 
 # --------------------------------------------------------------------------
@@ -113,7 +113,7 @@ def compute_metrics(df: pd.DataFrame, year: int) -> pd.DataFrame:
             parents = df.loc[mask, "parent_number"].dropna()
             parents = parents[parents.str.strip() != ""]
 
-            rows.append({
+            row = {
                 "year": year,
                 "sample": sample_name,
                 "geography": geo_name,
@@ -127,17 +127,24 @@ def compute_metrics(df: pd.DataFrame, year: int) -> pd.DataFrame:
                 "employment_ge_50": float(usable[usable >= 50].sum()),
                 "estabs_ge_500": int((usable >= 500).sum()),
                 "employment_ge_500": float(usable[usable >= 500].sum()),
-                "mass_at_50": int(counts.get(50, 0)),
-                "spike_ratio_50": round(
-                    spike_ratio(counts, 50, LOW_WINDOW + HIGH_WINDOW), 3),
-                "spike_ratio_50_from_below": round(
-                    spike_ratio(counts, 50, LOW_WINDOW), 3),
-                "mass_at_500": int(counts.get(500, 0)),
-                "spike_ratio_500": round(spike_ratio(counts, 500, WINDOW_500), 3),
-            })
+            }
+
+            # Spike ratios at the real threshold (50) and at placebo round
+            # numbers where no tax ever applied. If the Chicago-minus-control
+            # gap moves as much at 40 and 60 as it does at 50, that movement
+            # is the noise floor of the estimator, not a treatment effect.
+            for t in THRESHOLDS:
+                below = [t - 4, t - 3, t - 2, t - 1]
+                above = [t + 1, t + 2, t + 3, t + 4]
+                row[f"mass_at_{t}"] = int(counts.get(t, 0))
+                row[f"spike_ratio_{t}"] = round(
+                    spike_ratio(counts, t, below + above), 3)
+                row[f"spike_ratio_{t}_from_below"] = round(
+                    spike_ratio(counts, t, below), 3)
+
+            rows.append(row)
 
     return pd.DataFrame(rows)
-
 
 # --------------------------------------------------------------------------
 # Main
