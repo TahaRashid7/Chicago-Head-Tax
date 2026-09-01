@@ -93,6 +93,7 @@ def extract_year(year: int, limit_chunks: int | None = None) -> pd.DataFrame:
                     encoding="latin-1",
                     low_memory=False,
                     na_filter=False,      # keep "" as "", decide on nulls ourselves
+                    on_bad_lines="skip",     # vendor quoting defects in name fields
                 )
 
                 for n, chunk in enumerate(reader, start=1):
