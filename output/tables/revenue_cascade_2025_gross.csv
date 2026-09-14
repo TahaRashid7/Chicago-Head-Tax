@@ -1,0 +1,13 @@
+scenario,threshold,firms,employees,gross_revenue
+All firms with 500+ Chicago employees,500 or more,284,461281,182667276.0
+All firms with 500+ Chicago employees,more than 500,268,453281,179499276.0
+  less government (NAICS 92),500 or more,238,408384,161720064.0
+  less government (NAICS 92),more than 500,230,404384,160136064.0
+  less public administration + education (61),500 or more,231,399362,158147352.0
+  less public administration + education (61),more than 500,223,395362,156563352.0
+  less the above + hospitals (6221-6223),500 or more,213,350131,138651876.0
+  less the above + hospitals (6221-6223),more than 500,205,346131,137067876.0
+  less the above + all health & social (62),500 or more,200,325736,128991456.0
+  less the above + all health & social (62),more than 500,192,321736,127407456.0
+  less the above + civic/religious (813),500 or more,195,320904,127077984.0
+  less the above + civic/religious (813),more than 500,187,316904,125493984.0

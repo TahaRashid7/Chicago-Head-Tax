@@ -1,0 +1,11 @@
+assumption,status,direction,note
+"Threshold counts Chicago employees, not company-wide",unresolvable,understates if company-wide,Never specified; the 175-firm figure supports the Chicago reading
+A qualifying firm pays on ALL its employees,unresolvable,overstates if only those above the threshold,Matches the 1973-2013 notch structure
+Point-in-time snapshot stands in for a monthly tax,unresolvable,OVERSTATES,Firms crossing mid-year are treated as qualifying all year
+Parent field splits employers with no shared parent,partly fixed,UNDERSTATES,Ten systems consolidated; bank branch networks remain split
+Nine records with doubtful headcounts,bounded,overstates,Component-level flag; reported both ways
+Geography factor 0.891 borrowed from Wetmore,borrowed,uncertain,Built for a Census OnTheMap base; may not transfer exactly
+Full-time factor 0.807 borrowed from Seattle PSRC,scenario,reduces by 19.3%,Reading B only
+"Perfect compliance, no behavioural response",stated,OVERSTATES,Wetmore states the same caveat
+Vendor-modelled employment inside firm totals,measured,uncertain,See section 3; ~91% of the base is observed
+Hospital consolidation patterns are our judgement,documented,uncertain,See CONSOLIDATE; Ascension entities left separate

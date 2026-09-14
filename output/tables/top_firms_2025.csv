@@ -1,0 +1,31 @@
+company,naics2,n_estab,emp,n_unknown,is_government,is_education,is_health_social,is_civic_religious
+UNIVERSITY-CHICAGO BOARD-TRSTS,99,76,19684.0,2.0,False,False,False,False
+NORTHWESTERN MEMORIAL HOSP,62,105,10881.0,2.0,False,False,True,False
+UNITED AIRLINES HOLDINGS INC,54,5,8146.0,0.0,False,False,False,False
+JOHNSTON R BOWMAN HEALTH CTR,62,1,8000.0,0.0,False,False,True,False
+MCDONALD'S CORP,42,113,7924.0,0.0,False,False,False,False
+JEWEL-OSCO,44,69,7241.0,0.0,False,False,False,False
+CNA FINANCIAL CORP,52,8,7212.0,0.0,False,False,False,False
+HEALTH CARE SVC CORP,52,4,7063.0,0.0,False,False,False,False
+BAKER & MCKENZIE LLP,54,3,7008.0,0.0,False,False,False,False
+STATE STREET GLOBAL ADVISORS,52,1,7000.0,0.0,False,False,False,False
+MT SINAI HOSPITAL,62,18,6789.0,0.0,False,False,True,False
+ADVOCATE IL MASONIC MED CTR,62,133,6471.0,1.0,False,False,True,False
+ACCENTURE LIMITED,51,3,6405.0,0.0,False,False,False,False
+BMO FINANCIAL CORP,52,34,6339.0,0.0,False,False,False,False
+NORTHERN TRUST CORP,52,7,6048.0,0.0,False,False,False,False
+EXELON CORP,23,4,6027.0,0.0,False,False,False,False
+CHICAGO MARRIOTT DOWNTOWN,72,39,5950.0,0.0,False,False,False,False
+UI HEALTH,62,50,5919.0,1.0,False,False,True,False
+MERRY MAIDS,32,583,5918.0,1.0,False,False,False,False
+UNITED STATES POSTAL SVC,48,2187,5161.0,2121.0,False,False,False,False
+DELOITTE,52,2,5006.0,0.0,False,False,False,False
+ODYSSEY CRUISES CHICAGO,,1,5000.0,0.0,,,,False
+PALMER HOUSE A HILTON HOTEL,72,33,4659.0,0.0,False,False,False,False
+CHARMS CO,42,7,4083.0,0.0,False,False,False,False
+CITY COLLEGES-CHICAGO-HARRY S,61,14,4078.0,0.0,False,True,False,False
+ANN-ROBERT H LURIE CHILDREN'S,62,6,4053.0,0.0,False,False,True,False
+DLA PIPER LLP,,1,4036.0,0.0,,,,False
+SINAI MEDICAL GROUP,62,1,4000.0,0.0,False,False,True,False
+TARGET,44,24,3780.0,1.0,False,False,False,False
+HYATT REGENCY CHICAGO,72,19,3756.0,0.0,False,False,False,False

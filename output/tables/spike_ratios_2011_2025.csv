@@ -1,0 +1,9 @@
+unit,sample,year,n_at_50,baseline_mean,spike_ratio,ci_low,ci_high,excess_mass
+establishment,all,2011,724,18.9,38.3,32.6,45.0,705.0
+establishment,all,2025,591,52.8,11.2,10.0,12.6,538.0
+establishment,observed,2011,721,18.1,39.8,33.8,46.9,703.0
+establishment,observed,2025,551,20.1,27.4,23.3,32.2,531.0
+firm,all,2011,610,18.1,33.7,28.5,39.8,592.0
+firm,all,2025,465,46.9,9.9,8.7,11.3,418.0
+firm,observed,2011,606,14.9,40.7,34.0,48.7,591.0
+firm,observed,2025,426,16.0,26.6,22.2,31.9,410.0
