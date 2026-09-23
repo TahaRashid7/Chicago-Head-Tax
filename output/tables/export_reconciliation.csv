@@ -1,0 +1,7 @@
+check,exported,panel,pass
+establishment rows: bands vs panel,16356211,16356211,True
+employment: bands vs panel,189106069,189106069,True
+rows with employment 1-1000: distribution vs panel,15170525,15170525,True
+sector table rows vs panel,16356211,16356211,True
+"Chicago single_observed at 49, all years",736,736,True
+"Chicago employment in firms with 500+, firm panel vs rollup",14790305,14790305,True
