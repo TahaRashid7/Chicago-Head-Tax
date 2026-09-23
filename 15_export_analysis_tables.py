@@ -28,7 +28,8 @@ Outputs, all under output/tables/:
   export_manifest.csv                 row counts and SHA-256 for every file.
 
 Geographies: chicago (city and Cook), cook_ex_chicago, msa_ex_cook (CBSA 16980
-outside Cook), il_ex_msa. Records with city Chicago but a non-Cook county are
+outside Cook, Illinois part), il_ex_msa, and msa_out_of_state (the Indiana and
+Wisconsin part of CBSA 16980) when infogroup_MSAOUT_*.parquet files exist. Records with city Chicago but a non-Cook county are
 counted separately as drift and excluded.
 
 Samples: single_observed (single-location, verified headcount; the primary
@@ -66,12 +67,22 @@ TAB.mkdir(parents=True, exist_ok=True)
 EMP_CAP = 1000          # exact counts up to here; above goes in the band table
 CHICAGO_CBSA = "16980"
 
+# Chicago metro by a fixed county list (the 14 counties of the Chicago-Naperville-
+# Elgin metro area), so the definition does not move with OMB redraws or with
+# how the vendor coded CBSA in a given year. Section 7 reports disagreements.
+METRO_IL_COLLAR = ("17037", "17043", "17063", "17089", "17093", "17097", "17111", "17197")
+METRO_OUT_OF_STATE = ("18073", "18089", "18111", "18127", "55059")
+_q = lambda xs: ", ".join(f"'{x}'" for x in xs)
+
 GEO_SQL = f"""
     CASE
+        WHEN upper(trim(state)) <> 'IL' AND trim(coalesce(fips_code, '')) IN ({_q(METRO_OUT_OF_STATE)})
+             THEN 'msa_out_of_state'
+        WHEN upper(trim(state)) <> 'IL' THEN 'other_out_of_state'
         WHEN in_chicago THEN 'chicago'
         WHEN is_chicago AND NOT is_cook THEN 'drift'
         WHEN is_cook THEN 'cook_ex_chicago'
-        WHEN cbsa_code = '{CHICAGO_CBSA}' THEN 'msa_ex_cook'
+        WHEN trim(coalesce(fips_code, '')) IN ({_q(METRO_IL_COLLAR)}) THEN 'msa_ex_cook'
         ELSE 'il_ex_msa'
     END"""
 
@@ -100,6 +111,15 @@ MONTHS_SQL = """
     END"""
 
 
+def memory_limit() -> str:
+    """60% of physical RAM where the OS reports it, else 5GB (Windows)."""
+    try:
+        total = os.sysconf("SC_PAGE_SIZE") * os.sysconf("SC_PHYS_PAGES")
+        return f"{max(1, int(total * 0.6 / 1024**3))}GB"
+    except (AttributeError, ValueError, OSError):
+        return "5GB"
+
+
 def log(m: str = "") -> None:
     print(m, flush=True)
 
@@ -125,14 +145,14 @@ def write(df: pd.DataFrame, name: str, manifest: list) -> None:
 
 
 def main() -> None:
-    files = sorted(DERIVED.glob("infogroup_IL_*.parquet"))
+    files = sorted(DERIVED.glob("infogroup_IL_*.parquet")) + sorted(DERIVED.glob("infogroup_MSAOUT_*.parquet"))
     if not files:
         raise SystemExit(f"No parquets in {DERIVED}")
     lst = "[" + ", ".join(f"'{p.as_posix()}'" for p in files) + "]"
     log(f"Reading {len(files)} parquets from {DERIVED}")
 
     con = duckdb.connect()
-    con.execute("PRAGMA memory_limit='5GB'")
+    con.execute(f"PRAGMA memory_limit='{memory_limit()}'")
     t0 = time.time()
 
     con.execute(f"""
@@ -145,6 +165,7 @@ def main() -> None:
                parent_id IS NULL                      AS single,
                coalesce(parent_id, abi)               AS firm_id,
                abi, company,
+               trim(coalesce(cbsa_code, '')) = '{CHICAGO_CBSA}' AS vendor_cbsa_metro,
                substr(coalesce(nullif(trim(primary_naics_code), ''), nullif(trim(naics_code), ''), ''), 1, 2) AS naics2,
                trim(coalesce(business_status_code, '')) AS status,
                {MONTHS_SQL}                           AS months_since_verified
@@ -223,8 +244,10 @@ def main() -> None:
                coalesce(sum(emp) FILTER (WHERE geo = 'msa_ex_cook'), 0)          AS msa_ex_cook_emp,
                count(*) FILTER (WHERE geo = 'il_ex_msa')                         AS il_ex_msa_sites,
                coalesce(sum(emp) FILTER (WHERE geo = 'il_ex_msa'), 0)            AS il_ex_msa_emp,
-               count(*)                                                          AS il_sites,
-               coalesce(sum(emp), 0)                                             AS il_emp,
+               count(*) FILTER (WHERE geo = 'msa_out_of_state')                  AS msa_out_of_state_sites,
+               coalesce(sum(emp) FILTER (WHERE geo = 'msa_out_of_state'), 0)     AS msa_out_of_state_emp,
+               count(*) FILTER (WHERE geo <> 'msa_out_of_state')                 AS il_sites,
+               coalesce(sum(emp) FILTER (WHERE geo <> 'msa_out_of_state'), 0)    AS il_emp,
                count(DISTINCT status)                                            AS n_status_codes
         FROM est GROUP BY year, firm_id
     """)
@@ -255,6 +278,23 @@ def main() -> None:
         GROUP BY ALL ORDER BY year, chicago_emp_class
     """).df()
     write(d, "multisite_summary.csv", manifest)
+
+    rule("6b. METRO DEFINITION: FIXED COUNTIES VS VENDOR CBSA CODE")
+    d = con.execute("""
+        SELECT year,
+               count(*) FILTER (WHERE geo IN ('chicago','cook_ex_chicago','msa_ex_cook','msa_out_of_state')) AS metro_by_county,
+               count(*) FILTER (WHERE vendor_cbsa_metro) AS metro_by_vendor_cbsa,
+               count(*) FILTER (WHERE vendor_cbsa_metro AND geo IN ('il_ex_msa','other_out_of_state')) AS cbsa_but_not_county,
+               count(*) FILTER (WHERE NOT vendor_cbsa_metro AND geo IN ('chicago','cook_ex_chicago','msa_ex_cook','msa_out_of_state')) AS county_but_not_cbsa,
+               count(*) FILTER (WHERE geo = 'msa_out_of_state') AS out_of_state_rows,
+               count(*) FILTER (WHERE geo = 'other_out_of_state') AS other_out_of_state_rows
+        FROM est GROUP BY year ORDER BY year
+    """).df()
+    log(d.to_string(index=False))
+    log("  Small disagreement counts are normal (vendor geocoding at county edges).")
+    log("  A year where they are large means the vendor's CBSA coding differs that year;")
+    log("  the county-based definition used everywhere above is unaffected.")
+    write(d, "metro_definition_check.csv", manifest)
 
     rule("7. RECONCILIATION (the exports must add back to the panel)")
     checks = []

@@ -78,7 +78,7 @@ DERIVED = DATA / "derived"
 QC = DERIVED / "qc"
 SUMMARY_CSV = ROOT / "output" / "tables" / "extraction_summary_by_year.csv"
 
-SCRIPT_VERSION = "v3.5"
+SCRIPT_VERSION = "v3.6"
 MARKER = ".extracted_by_03_extract_year"
 TRANSCODED = RAW / "_transcoded"
 CHUNK = 16 * 1024 * 1024
@@ -175,6 +175,20 @@ assert len(CANONICAL_COLUMNS) == 89
 # A well-formed line in these files: every field quoted, internal quotes
 # doubled. Used only when DuckDB has already reported a quoting error.
 VALID_LINE = re.compile(rb'"(?:[^"]|"")*"(?:,"(?:[^"]|"")*")*')
+
+
+# Region filters. "IL" is the main panel. "MSAOUT" is the Indiana and Wisconsin
+# part of the Chicago metro area (CBSA 16980), written to separately named files
+# so the Illinois panel and its summary are never touched.
+REGIONS = {
+    "IL": {"where": "upper(trim(state)) = 'IL'", "label": "Illinois"},
+    # Superset: the vendor's CBSA code OR the fixed county list (Jasper, Lake,
+    # Newton, Porter IN; Kenosha WI). The export assigns geography by county.
+    "MSAOUT": {"where": ("upper(trim(state)) IN ('IN', 'WI') AND (trim(coalesce(cbsa_code, '')) = '16980' "
+                         "OR trim(coalesce(fips_code, '')) IN ('18073', '18089', '18111', '18127', '55059'))"),
+               "label": "Chicago metro outside Illinois (IN, WI)"},
+}
+REGION = "IL"
 
 
 class YearFailed(Exception):
@@ -501,8 +515,8 @@ def cleanup(src: dict, keep_raw: bool, ok: bool) -> str:
 
 def extract_year(year: int, overwrite: bool, keep_raw: bool) -> dict:
     t0 = time.time()
-    out_parquet = DERIVED / f"infogroup_IL_{year}.parquet"
-    out_meta = QC / f"provenance_IL_{year}.json"
+    out_parquet = DERIVED / f"infogroup_{REGION}_{year}.parquet"
+    out_meta = QC / f"provenance_{REGION}_{year}.json"
     row: dict = {"data_year": year}
 
     if out_parquet.exists() and not overwrite:
@@ -563,7 +577,7 @@ def extract_year(year: int, overwrite: bool, keep_raw: bool) -> dict:
         # when standard names were applied to a headerless member.
         scan_sql = (
             "SELECT count(*) AS n, "
-            "count(*) FILTER (WHERE upper(trim(state)) = 'IL') AS il, "
+            f"count(*) FILTER (WHERE {REGIONS[REGION]['where']}) AS il, "
             "count(*) FILTER (WHERE regexp_full_match(trim(state), '[A-Z]{{2}}')) AS state_ok, "
             "count(*) FILTER (WHERE regexp_full_match(trim(abi), '[0-9]{{9}}')) AS abi_ok, "
             f"sum({touch}) AS chars FROM {{src}}"
@@ -673,12 +687,12 @@ def extract_year(year: int, overwrite: bool, keep_raw: bool) -> dict:
         sel = ", ".join(present)
         union = "\nUNION ALL\n".join(
             f"SELECT {sel} FROM {reader(read_path[m.name], read_enc[m.name], has_header[m.name])} "
-            f"WHERE upper(trim(state)) = 'IL'"
+            f"WHERE {REGIONS[REGION]['where']}"
             for m in il_members
         )
         con.execute(f"CREATE TABLE il_raw AS {union}")
         il_rows = con.execute("SELECT count(*) FROM il_raw").fetchone()[0]
-        log(f"  {il_rows:,} Illinois rows loaded")
+        log(f"  {il_rows:,} rows loaded ({REGIONS[REGION]['label']})")
         if il_rows != sum(il_by_member.values()):
             raise YearFailed(
                 f"Build loaded {il_rows:,} rows but the scan counted "
@@ -688,12 +702,11 @@ def extract_year(year: int, overwrite: bool, keep_raw: bool) -> dict:
         # ------------------------------------------------------------------
         rule("4. RECODE AND DERIVED FIELDS")
         # ------------------------------------------------------------------
-        if "naics_code" in present:
-            naics2 = "substr(trim(naics_code), 1, 2)"
-        elif "primary_naics_code" in present:
-            naics2 = "substr(trim(primary_naics_code), 1, 2)"
-        else:
-            naics2 = "CAST(NULL AS VARCHAR)"
+        # primary_naics_code is populated on 99% of rows in every year; naics_code
+        # is a secondary field filled on only 20-37%. Prefer the primary.
+        parts = [f"nullif(trim({c}), '')" for c in ("primary_naics_code", "naics_code") if c in present]
+        naics2 = (f"substr(coalesce({', '.join(parts)}), 1, 2)" if parts
+                  else "CAST(NULL AS VARCHAR)")
 
         con.execute(f"""
             CREATE TABLE il AS
@@ -874,7 +887,7 @@ def extract_year(year: int, overwrite: bool, keep_raw: bool) -> dict:
         rule("8. REGRESSION TEST")
         # ------------------------------------------------------------------
         checks: dict[str, dict] = {}
-        if year == 2025:
+        if year == 2025 and REGION == "IL":
             got = {
                 "raw_rows_total": raw_total, "il_rows": n,
                 "chicago_rows": s["n_chicago"], "in_chicago_rows": s["n_in_chicago"],
@@ -1005,27 +1018,39 @@ def extract_year(year: int, overwrite: bool, keep_raw: bool) -> dict:
     return row
 
 
+def summary_path() -> Path:
+    if REGION == "IL":
+        return SUMMARY_CSV
+    return SUMMARY_CSV.with_name(f"extraction_summary_by_year_{REGION}.csv")
+
+
 def write_summary(rows: list[dict]) -> None:
     new = pd.DataFrame([r for r in rows if r.get("status") not in (None, "skipped_existing")])
     if new.empty:
         return
-    SUMMARY_CSV.parent.mkdir(parents=True, exist_ok=True)
-    if SUMMARY_CSV.exists():
-        old = pd.read_csv(SUMMARY_CSV)
+    out = summary_path()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    if out.exists():
+        old = pd.read_csv(out)
         old = old[~old.data_year.isin(new.data_year)]
         new = pd.concat([old, new], ignore_index=True)
-    new.sort_values("data_year").convert_dtypes().to_csv(SUMMARY_CSV, index=False)
-    log(f"\nSummary written to {SUMMARY_CSV}")
+    new.sort_values("data_year").convert_dtypes().to_csv(out, index=False)
+    log(f"\nSummary written to {out}")
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("years", nargs="+", help="e.g. 2025, or 2008 2013, or 1997-2025")
     ap.add_argument("--overwrite", action="store_true")
+    ap.add_argument("--region", default="IL", choices=sorted(REGIONS),
+                    help="IL (default) or MSAOUT (Indiana and Wisconsin part of the Chicago metro)")
     ap.add_argument("--keep-raw", action="store_true",
                     help="Do not delete text extracted from a zip this run")
     args = ap.parse_args()
     years = parse_years(args.years)
+    global REGION
+    REGION = args.region
+    log(f"Region: {REGION} ({REGIONS[REGION]['label']})")
 
     log(f"Data root: {DATA}")
     log(f"Years: {years}")

@@ -48,6 +48,15 @@ YEARS = range(1997, 2026)
 CHICAGO_CBSA = "16980"
 
 
+def memory_limit() -> str:
+    """60% of physical RAM where the OS reports it, else 5GB (Windows)."""
+    try:
+        total = os.sysconf("SC_PAGE_SIZE") * os.sysconf("SC_PHYS_PAGES")
+        return f"{max(1, int(total * 0.6 / 1024**3))}GB"
+    except (AttributeError, ValueError, OSError):
+        return "5GB"
+
+
 def log(m: str = "") -> None:
     print(m, flush=True)
 
@@ -58,7 +67,7 @@ def rule(t: str) -> None:
 
 def main() -> None:
     con = duckdb.connect()
-    con.execute("PRAGMA memory_limit='4GB'")
+    con.execute(f"PRAGMA memory_limit='{memory_limit()}'")
     rows, problems = [], []
 
     rule("1. FILES AND PROVENANCE")
