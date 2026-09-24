@@ -7,3 +7,6 @@ output/logs/
 output/figures/*.png
 .ipynb_checkpoints/
 __pycache__/
+# keep figure PNGs for viewing on GitHub
+!output/figures/*.png
+!output/figures/**/*.png
