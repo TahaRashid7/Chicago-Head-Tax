@@ -1,0 +1,31 @@
+tier,reading,scenario,firms,covered_employees,revenue_musd
+No policy exemptions,A: every employee,unadjusted,259,433815,171.8
+No policy exemptions,A: every employee,census,232,398046,157.6
+No policy exemptions,A: every employee,census_all_outside,202,334633,132.5
+No policy exemptions,B: full-time only,unadjusted,259,340061,134.7
+No policy exemptions,B: full-time only,census,232,312022,123.6
+No policy exemptions,B: full-time only,census_all_outside,202,262314,103.9
+less education,A: every employee,unadjusted,247,402723,159.5
+less education,A: every employee,census,222,368882,146.1
+less education,A: every employee,census_all_outside,192,307562,121.8
+less education,B: full-time only,unadjusted,247,315688,125.0
+less education,B: full-time only,census,222,289161,114.5
+less education,B: full-time only,census_all_outside,192,241093,95.5
+less hospitals,A: every employee,unadjusted,229,341143,135.1
+less hospitals,A: every employee,census,205,309698,122.6
+less hospitals,A: every employee,census_all_outside,176,253098,100.2
+less hospitals,B: full-time only,unadjusted,229,267417,105.9
+less hospitals,B: full-time only,census,205,242768,96.1
+less hospitals,B: full-time only,census_all_outside,176,198399,78.6
+less all health,A: every employee,unadjusted,219,324915,128.7
+less all health,A: every employee,census,196,294457,116.6
+less all health,A: every employee,census_all_outside,168,239424,94.8
+less all health,B: full-time only,unadjusted,219,254696,100.9
+less all health,B: full-time only,census,196,230820,91.4
+less all health,B: full-time only,census_all_outside,168,187681,74.3
+less civic & religious,A: every employee,unadjusted,212,318483,126.1
+less civic & religious,A: every employee,census,189,288379,114.2
+less civic & religious,A: every employee,census_all_outside,161,234143,92.7
+less civic & religious,B: full-time only,unadjusted,212,249654,98.9
+less civic & religious,B: full-time only,census,189,226055,89.5
+less civic & religious,B: full-time only,census_all_outside,161,183541,72.7

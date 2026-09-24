@@ -1,0 +1,18 @@
+parameter,value,table,year,geography,detail
+"wfh_rate: Agriculture, forestry, fishing and hunting, and mining",0.1291,B08126,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area","2,073 of 16,059 workers"
+wfh_rate: Construction,0.0841,B08126,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area","20,429 of 242,869 workers"
+wfh_rate: Manufacturing,0.1138,B08126,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area","58,774 of 516,488 workers"
+wfh_rate: Wholesale trade,0.1625,B08126,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area","18,806 of 115,696 workers"
+wfh_rate: Retail trade,0.0933,B08126,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area","43,649 of 467,704 workers"
+"wfh_rate: Transportation and warehousing, and utilities",0.079,B08126,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area","28,755 of 364,130 workers"
+wfh_rate: Information,0.2982,B08126,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area","26,358 of 88,401 workers"
+"wfh_rate: Finance and insurance, and real estate and rental and leasing",0.2783,B08126,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area","101,859 of 366,055 workers"
+"wfh_rate: Professional, scientific, and management, and administrative and waste management services",0.3101,B08126,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area","214,355 of 691,284 workers"
+"wfh_rate: Educational services, and health care and social assistance",0.1004,B08126,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area","106,973 of 1,065,626 workers"
+"wfh_rate: Arts, entertainment, and recreation, and accommodation and food services",0.0693,B08126,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area","28,508 of 411,600 workers"
+wfh_rate: Other services (except public administration),0.1372,B08126,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area","31,806 of 231,765 workers"
+wfh_rate: Public administration,0.1286,B08126,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area","21,258 of 165,263 workers"
+wfh_rate: Armed forces,0.3751,B08126,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area","5,189 of 13,832 workers"
+wfh_rate: All industries,0.149,B08126,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area","708,792 of 4,756,772 workers"
+resident_share (rho),0.6926,B08008 / B08604,2024,"Chicago city, Illinois","1,085,613 residents working in Chicago / 1,567,413 working in Chicago"
+full_time_share,0.7839,B23022,2024,"Chicago-Naperville-Elgin, IL-IN Metro Area",usually 35+ hours per week
