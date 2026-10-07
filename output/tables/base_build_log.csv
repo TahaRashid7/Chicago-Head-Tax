@@ -1,0 +1,11 @@
+step,firms,employees,revenue_musd
+all firms at 500+,284,461281,182.67
+  removed: government (NAICS 92),14,19196,7.6
+"  removed: government (SIC 9xxx, not already caught)",0,0,0.0
+"  removed: government (named public body, not already caught)",19,34959,13.84
+UPPER BASE (government excluded),251,407126,161.22
+CENTRAL BASE (upper base less Rule A),243,388336,153.78
+  Rule B: rollup above vendor corporate total,11,53516,21.19
+  Rule C: franchise pattern,1,5918,2.34
+"  Review: large, no parent record",17,35505,14.06
+CONSERVATIVE BASE,214,293397,116.19

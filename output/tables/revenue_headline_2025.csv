@@ -1,0 +1,31 @@
+base,tier,reading,scenario,firms,covered_employees,revenue_musd
+central,No policy exemptions,A: every employee,unadjusted,243,388336,153.8
+central,No policy exemptions,A: every employee,census,218,356587,141.2
+central,No policy exemptions,A: every employee,census_all_outside,185,298686,118.3
+central,No policy exemptions,B: full-time only,unadjusted,243,304411,120.5
+central,No policy exemptions,B: full-time only,census,218,279523,110.7
+central,No policy exemptions,B: full-time only,census_all_outside,185,234135,92.7
+central,less education,A: every employee,unadjusted,231,359031,142.2
+central,less education,A: every employee,census,208,329156,130.3
+central,less education,A: every employee,census_all_outside,175,273222,108.2
+central,less education,B: full-time only,unadjusted,231,281439,111.4
+central,less education,B: full-time only,census,208,258020,102.2
+central,less education,B: full-time only,census_all_outside,175,214175,84.8
+central,less hospitals,A: every employee,unadjusted,215,316328,125.3
+central,less hospitals,A: every employee,census,193,288267,114.2
+central,less hospitals,A: every employee,census_all_outside,161,235740,93.4
+central,less hospitals,B: full-time only,unadjusted,215,247965,98.2
+central,less hospitals,B: full-time only,census,193,225968,89.5
+central,less hospitals,B: full-time only,census_all_outside,161,184793,73.2
+central,less all health,A: every employee,unadjusted,204,293649,116.3
+central,less all health,A: every employee,census,183,266773,105.6
+central,less all health,A: every employee,census_all_outside,151,215788,85.5
+central,less all health,B: full-time only,unadjusted,204,230187,91.2
+central,less all health,B: full-time only,census,183,209119,82.8
+central,less all health,B: full-time only,census_all_outside,151,169153,67.0
+central,less civic & religious,A: every employee,unadjusted,197,287217,113.7
+central,less civic & religious,A: every employee,census,176,260612,103.2
+central,less civic & religious,A: every employee,census_all_outside,144,210239,83.3
+central,less civic & religious,B: full-time only,unadjusted,197,225145,89.2
+central,less civic & religious,B: full-time only,census,176,204290,80.9
+central,less civic & religious,B: full-time only,census_all_outside,144,164803,65.3

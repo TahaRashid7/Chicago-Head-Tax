@@ -1,0 +1,8 @@
+measure,value
+firms at 500 or more,243.0
+firms reporting exactly 500,10.0
+firms at 450-499,17.0
+firms at 501-550,27.0
+firms below 500 after Census remote adjustment (central),25.0
+firms below 500 if every remote worker lives outside,58.0
+"of the central-case droppers, share within 550 employees",0.96

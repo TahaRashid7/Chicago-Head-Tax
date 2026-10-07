@@ -42,6 +42,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).resolve().parent))
+from src import figstyle as fs
+
 try:
     ROOT = Path(__file__).resolve().parent
 except NameError:
@@ -63,7 +68,7 @@ GEOS = {
 }
 LABEL = {"chicago": "Chicago", "cook_ex_chicago": "Cook County outside Chicago",
          "illinois_ex_cook": "Illinois outside Cook"}
-COLOR = {"chicago": "#1f5fa8", "cook_ex_chicago": "#d97b29", "illinois_ex_cook": "#7a7a7a"}
+COLOR = {"chicago": fs.CHICAGO, "cook_ex_chicago": fs.COOK, "illinois_ex_cook": fs.ILLINOIS}
 PERIODS = {
     "1998-2002 (tax, Dec snapshots)": range(1998, 2003),
     "2003-2011 (tax, $4)": range(2003, 2012),
@@ -134,52 +139,69 @@ def periods(d: pd.DataFrame, sample: str) -> pd.DataFrame:
 
 
 def figure(yr: pd.DataFrame, per: pd.DataFrame) -> None:
+    fs.apply()
     d = yr[(yr["sample"] == "all_verified") & (yr.baseline == PRIMARY_BASE)]
     raw = yr[(yr["sample"] == "all_verified") & (yr.baseline == "original")]
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8.6), sharex=True,
-                                   gridspec_kw={"height_ratios": [1.5, 1]})
-    for ax in (ax1, ax2):
-        ax.axvspan(1997.5, 2011.5, color="#f3e3cf", zorder=0)
-        ax.axvspan(2011.5, 2013.5, color="#f8efe3", zorder=0)
+    fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(9.5, 10.6), sharex=True,
+                                        gridspec_kw={"height_ratios": [1.25, 1.05, 0.8],
+                                                     "hspace": 0.30})
+    for ax in (ax1, ax2, ax3):
+        ax.axvspan(1997.5, 2011.5, color=fs.TAX_DARK, zorder=0, lw=0)
+        ax.axvspan(2011.5, 2013.5, color=fs.TAX_LIGHT, zorder=0, lw=0)
         for yb in (2002.5, 2022.5):
-            ax.axvline(yb, color="#999", lw=0.8, ls=(0, (2, 3)))
+            ax.axvline(yb, color=fs.FAINT, lw=0.7, ls=(0, (2, 3)), zorder=1)
+        ax.margins(x=0.01)
+
+    # Panel 1: levels
     for g in GEOS:
         x = d[d.geo == g].sort_values("year")
-        ax1.plot(x.year, x.ratio, "o-", color=COLOR[g], ms=3.5, lw=1.4, label=LABEL[g])
-        ax1.fill_between(x.year, x.lo, x.hi, color=COLOR[g], alpha=0.12, lw=0)
+        ax1.plot(x.year, x.ratio, "o-", color=COLOR[g], label=LABEL[g], zorder=3)
+        ax1.fill_between(x.year, x.lo, x.hi, color=COLOR[g], alpha=0.10, lw=0, zorder=2)
+    ax1.axhline(1, color=fs.MUTED, lw=0.8, ls="--", zorder=2)
+    ax1.set_ylabel("Businesses at 49 employees,\nrelative to neighbouring sizes")
+    fs.panel(ax1, "Excess at 49 rises in all three areas, including one that never had the tax")
+    ax1.legend(loc="upper left", ncol=1)
+    ax1.text(2004.6, ax1.get_ylim()[1], "  tax in force", fontsize=8.5, color="#9b7d4e", va="top")
+
+    # Panel 2: the test
+    piv = d.pivot_table(index="year", columns="geo", values="ratio")
+    for ctl in ("cook_ex_chicago", "illinois_ex_cook"):
+        gap = np.log(piv["chicago"]) - np.log(piv[ctl])
+        ax2.plot(gap.index, gap.values, "o-", color=COLOR[ctl],
+                 label=f"vs {LABEL[ctl]}", zorder=3)
+    ax2.axhline(0, color=fs.MUTED, lw=0.9, ls="--", zorder=2)
+    ax2.set_ylabel("Chicago minus comparison area\n(log excess ratio)")
+    fs.panel(ax2, "The test: a tax effect would make this gap close after the 2014 repeal. It does not.")
+    ax2.legend(loc="upper left")
+
+    # Panel 3: the artifact
+    for g in GEOS:
         r = raw[raw.geo == g].sort_values("year")
-        ax2.plot(r.year, r.n51 / r.n51[r.year.between(2006, 2011)].mean(), "o-",
-                 color=COLOR[g], ms=3, lw=1.2, label=LABEL[g])
-    ax1.axhline(1, color="#444", lw=0.7, ls="--")
-    ax1.set_ylabel("Excess mass at 49\n(1 = no excess)")
-    ax1.set_title("Businesses reporting exactly 49 employees, relative to neighbouring sizes",
-                  loc="left", fontsize=11)
-    ax1.legend(loc="upper left", fontsize=8.5, frameon=False)
-    ax1.text(2004.5, ax1.get_ylim()[1] * 0.95, "Tax in force", fontsize=8, color="#8a6d45")
-    ax1.text(2011.7, ax1.get_ylim()[1] * 0.95, "Phase-\nout", fontsize=8, color="#8a6d45", va="top")
-    ax2.axhline(1, color="#444", lw=0.7, ls="--")
-    ax2.set_ylabel("Count at exactly 51\n(2006-2011 average = 1)")
-    ax2.set_title("Why the original ratio falls in 2014: a jump at 51 in every geography",
-                  loc="left", fontsize=11)
-    ax2.set_xlabel("Data year")
+        base = r.n51[r.year.between(2006, 2011)].mean()
+        ax3.plot(r.year, r.n51 / base, "o-", color=COLOR[g], lw=1.5, zorder=3)
+    ax3.axhline(1, color=fs.MUTED, lw=0.8, ls="--", zorder=2)
+    ax3.set_ylabel("Businesses at exactly 51,\n2006-2011 average = 1")
+    fs.panel(ax3, "What misled the first pass: a data-vendor jump at 51 employees, in all three areas at once")
+    ax3.set_xlabel("Year")
+
     did = per[(per["sample"] == "all_verified") & (per.baseline == PRIMARY_BASE)
               & (per.period == "DiD pre minus post")].set_index("geo")
     c1 = did.loc["chicago_vs_cook_ex_chicago"]
     c2 = did.loc["chicago_vs_illinois_ex_cook"]
-    fig.suptitle("No robust evidence of bunching below the old 50-employee threshold",
-                 x=0.01, ha="left", fontsize=13)
-    fig.text(0.01, 0.005,
-             f"Difference-in-differences, 2003-2011 vs 2014-2022 (log points, 95% CI): Chicago vs Cook outside "
-             f"Chicago {c1.ratio:+.2f} ({c1.lo:+.2f} to {c1.hi:+.2f}); vs Illinois outside Cook "
-             f"{c2.ratio:+.2f} ({c2.lo:+.2f} to {c2.hi:+.2f}).\n"
-             "Ratio = count at 49 / mean count at 46-48 and 52-54 (51 skipped, see lower panel). "
-             "Single-location businesses with verified headcounts; 1997 excluded.\n"
-             "Shading: tax in force (dark), phase-out (light). Dotted lines: vendor coding changes. "
-             "Source: Data Axle (Infogroup) historical business files.",
-             fontsize=7.3, color="#555")
-    fig.tight_layout(rect=(0, 0.07, 1, 0.96))
+    fs.title(fig, "No evidence that the head tax caused bunching below 50 employees",
+             "Businesses reporting exactly 49 employees, the last size below the old threshold, 1998-2025")
+    fs.note(fig,
+            f"Difference-in-differences, 2003-2011 (taxed) against 2014-2022 (repealed), in log points with 95% "
+            f"confidence intervals: against Cook County outside Chicago {c1.ratio:+.2f} ({c1.lo:+.2f} to {c1.hi:+.2f}); "
+            f"against Illinois outside Cook {c2.ratio:+.2f} ({c2.lo:+.2f} to {c2.hi:+.2f}). Both are negative, meaning the "
+            f"gap widened after repeal.\nAcross eight specifications (three comparison areas, two baselines, two samples) "
+            "none is positive and statistically significant. Excess mass = businesses at 49 divided by the average at "
+            "46-48 and 52-54, skipping 51.\nSingle-location businesses with vendor-verified headcounts; 1997 excluded "
+            "for lack of a verification flag. Dotted lines mark vendor coding changes. "
+            "Source: Data Axle (Infogroup) historical business files, 1997-2025.")
+    fig.subplots_adjust(left=0.115, right=0.985, top=0.885, bottom=0.135)
     for ext in ("pdf", "png"):
-        fig.savefig(FIG / f"bunching_final.{ext}", dpi=200)
+        fig.savefig(FIG / f"bunching_final.{ext}", dpi=300)
     plt.close(fig)
 
 

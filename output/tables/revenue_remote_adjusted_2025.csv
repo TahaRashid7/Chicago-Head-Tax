@@ -1,31 +1,91 @@
-tier,reading,scenario,firms,covered_employees,revenue_musd
-No policy exemptions,A: every employee,unadjusted,259,433815,171.8
-No policy exemptions,A: every employee,census,232,398046,157.6
-No policy exemptions,A: every employee,census_all_outside,202,334633,132.5
-No policy exemptions,B: full-time only,unadjusted,259,340061,134.7
-No policy exemptions,B: full-time only,census,232,312022,123.6
-No policy exemptions,B: full-time only,census_all_outside,202,262314,103.9
-less education,A: every employee,unadjusted,247,402723,159.5
-less education,A: every employee,census,222,368882,146.1
-less education,A: every employee,census_all_outside,192,307562,121.8
-less education,B: full-time only,unadjusted,247,315688,125.0
-less education,B: full-time only,census,222,289161,114.5
-less education,B: full-time only,census_all_outside,192,241093,95.5
-less hospitals,A: every employee,unadjusted,229,341143,135.1
-less hospitals,A: every employee,census,205,309698,122.6
-less hospitals,A: every employee,census_all_outside,176,253098,100.2
-less hospitals,B: full-time only,unadjusted,229,267417,105.9
-less hospitals,B: full-time only,census,205,242768,96.1
-less hospitals,B: full-time only,census_all_outside,176,198399,78.6
-less all health,A: every employee,unadjusted,219,324915,128.7
-less all health,A: every employee,census,196,294457,116.6
-less all health,A: every employee,census_all_outside,168,239424,94.8
-less all health,B: full-time only,unadjusted,219,254696,100.9
-less all health,B: full-time only,census,196,230820,91.4
-less all health,B: full-time only,census_all_outside,168,187681,74.3
-less civic & religious,A: every employee,unadjusted,212,318483,126.1
-less civic & religious,A: every employee,census,189,288379,114.2
-less civic & religious,A: every employee,census_all_outside,161,234143,92.7
-less civic & religious,B: full-time only,unadjusted,212,249654,98.9
-less civic & religious,B: full-time only,census,189,226055,89.5
-less civic & religious,B: full-time only,census_all_outside,161,183541,72.7
+base,tier,reading,scenario,firms,covered_employees,revenue_musd
+central,No policy exemptions,A: every employee,unadjusted,243,388336,153.8
+central,No policy exemptions,A: every employee,census,218,356587,141.2
+central,No policy exemptions,A: every employee,census_all_outside,185,298686,118.3
+central,No policy exemptions,B: full-time only,unadjusted,243,304411,120.5
+central,No policy exemptions,B: full-time only,census,218,279523,110.7
+central,No policy exemptions,B: full-time only,census_all_outside,185,234135,92.7
+central,less education,A: every employee,unadjusted,231,359031,142.2
+central,less education,A: every employee,census,208,329156,130.3
+central,less education,A: every employee,census_all_outside,175,273222,108.2
+central,less education,B: full-time only,unadjusted,231,281439,111.4
+central,less education,B: full-time only,census,208,258020,102.2
+central,less education,B: full-time only,census_all_outside,175,214175,84.8
+central,less hospitals,A: every employee,unadjusted,215,316328,125.3
+central,less hospitals,A: every employee,census,193,288267,114.2
+central,less hospitals,A: every employee,census_all_outside,161,235740,93.4
+central,less hospitals,B: full-time only,unadjusted,215,247965,98.2
+central,less hospitals,B: full-time only,census,193,225968,89.5
+central,less hospitals,B: full-time only,census_all_outside,161,184793,73.2
+central,less all health,A: every employee,unadjusted,204,293649,116.3
+central,less all health,A: every employee,census,183,266773,105.6
+central,less all health,A: every employee,census_all_outside,151,215788,85.5
+central,less all health,B: full-time only,unadjusted,204,230187,91.2
+central,less all health,B: full-time only,census,183,209119,82.8
+central,less all health,B: full-time only,census_all_outside,151,169153,67.0
+central,less civic & religious,A: every employee,unadjusted,197,287217,113.7
+central,less civic & religious,A: every employee,census,176,260612,103.2
+central,less civic & religious,A: every employee,census_all_outside,144,210239,83.3
+central,less civic & religious,B: full-time only,unadjusted,197,225145,89.2
+central,less civic & religious,B: full-time only,census,176,204290,80.9
+central,less civic & religious,B: full-time only,census_all_outside,144,164803,65.3
+conservative,No policy exemptions,A: every employee,unadjusted,214,293397,116.2
+conservative,No policy exemptions,A: every employee,census,189,265958,105.3
+conservative,No policy exemptions,A: every employee,census_all_outside,157,218223,86.4
+conservative,No policy exemptions,B: full-time only,unadjusted,214,229989,91.1
+conservative,No policy exemptions,B: full-time only,census,189,208480,82.6
+conservative,No policy exemptions,B: full-time only,census_all_outside,157,171062,67.7
+conservative,less education,A: every employee,unadjusted,203,283776,112.4
+conservative,less education,A: every employee,census,180,257603,102.0
+conservative,less education,A: every employee,census_all_outside,148,210468,83.3
+conservative,less education,B: full-time only,unadjusted,203,222448,88.1
+conservative,less education,B: full-time only,census,180,201931,80.0
+conservative,less education,B: full-time only,census_all_outside,148,164982,65.3
+conservative,less hospitals,A: every employee,unadjusted,189,254333,100.7
+conservative,less hospitals,A: every employee,census,167,229564,90.9
+conservative,less hospitals,A: every employee,census_all_outside,136,184914,73.2
+conservative,less hospitals,B: full-time only,unadjusted,189,199368,78.9
+conservative,less hospitals,B: full-time only,census,167,179952,71.3
+conservative,less hospitals,B: full-time only,census_all_outside,136,144951,57.4
+conservative,less all health,A: every employee,unadjusted,183,249654,98.9
+conservative,less all health,A: every employee,census,162,225515,89.3
+conservative,less all health,A: every employee,census_all_outside,131,181156,71.7
+conservative,less all health,B: full-time only,unadjusted,183,195700,77.5
+conservative,less all health,B: full-time only,census,162,176778,70.0
+conservative,less all health,B: full-time only,census_all_outside,131,142005,56.2
+conservative,less civic & religious,A: every employee,unadjusted,179,246222,97.5
+conservative,less civic & religious,A: every employee,census,158,222228,88.0
+conservative,less civic & religious,A: every employee,census_all_outside,127,178195,70.6
+conservative,less civic & religious,B: full-time only,unadjusted,179,193010,76.4
+conservative,less civic & religious,B: full-time only,census,158,174201,69.0
+conservative,less civic & religious,B: full-time only,census_all_outside,127,139684,55.3
+upper,No policy exemptions,A: every employee,unadjusted,251,407126,161.2
+upper,No policy exemptions,A: every employee,census,225,373564,147.9
+upper,No policy exemptions,A: every employee,census_all_outside,192,312705,123.8
+upper,No policy exemptions,B: full-time only,unadjusted,251,319140,126.4
+upper,No policy exemptions,B: full-time only,census,225,292831,116.0
+upper,No policy exemptions,B: full-time only,census_all_outside,192,245124,97.1
+upper,less education,A: every employee,unadjusted,239,377821,149.6
+upper,less education,A: every employee,census,215,346133,137.1
+upper,less education,A: every employee,census_all_outside,182,287241,113.7
+upper,less education,B: full-time only,unadjusted,239,296168,117.3
+upper,less education,B: full-time only,census,215,271328,107.4
+upper,less education,B: full-time only,census_all_outside,182,225164,89.2
+upper,less hospitals,A: every employee,unadjusted,223,335118,132.7
+upper,less hospitals,A: every employee,census,200,305244,120.9
+upper,less hospitals,A: every employee,census_all_outside,168,249759,98.9
+upper,less hospitals,B: full-time only,unadjusted,223,262694,104.0
+upper,less hospitals,B: full-time only,census,200,239276,94.8
+upper,less hospitals,B: full-time only,census_all_outside,168,195782,77.5
+upper,less all health,A: every employee,unadjusted,212,312439,123.7
+upper,less all health,A: every employee,census,190,283750,112.4
+upper,less all health,A: every employee,census_all_outside,158,229807,91.0
+upper,less all health,B: full-time only,unadjusted,212,244916,97.0
+upper,less all health,B: full-time only,census,190,222427,88.1
+upper,less all health,B: full-time only,census_all_outside,158,180142,71.3
+upper,less civic & religious,A: every employee,unadjusted,205,306007,121.2
+upper,less civic & religious,A: every employee,census,183,277589,109.9
+upper,less civic & religious,A: every employee,census_all_outside,151,224258,88.8
+upper,less civic & religious,B: full-time only,unadjusted,205,239874,95.0
+upper,less civic & religious,B: full-time only,census,183,217598,86.2
+upper,less civic & religious,B: full-time only,census_all_outside,151,175792,69.6

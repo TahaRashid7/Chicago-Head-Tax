@@ -1,0 +1,76 @@
+sector,n,employment,pct_employment,unit,threshold
+Health care,437,108945.0,14.493534482758621,Firms (corporate parent),50
+Professional and technical,480,102862.0,13.684280544912728,Firms (corporate parent),50
+Education,598,83402.0,11.09541294167731,Firms (corporate parent),50
+Accommodation and food,275,69183.0,9.203783524904214,Firms (corporate parent),50
+Finance and insurance,256,67087.0,8.924941464452958,Firms (corporate parent),50
+Retail trade,226,64398.0,8.567209450830141,Firms (corporate parent),50
+Manufacturing,247,52190.0,6.943114091102596,Firms (corporate parent),50
+Other services,207,29667.0,3.9467592592592595,Firms (corporate parent),50
+Information,194,26662.0,3.5469880800340574,Firms (corporate parent),50
+Transport and warehousing,104,25132.0,3.343444018731375,Firms (corporate parent),50
+Real estate,105,22798.0,3.0329395487441464,Firms (corporate parent),50
+Administrative and support,107,21173.0,2.816757130693912,Firms (corporate parent),50
+Construction,104,20423.0,2.7169806300553425,Firms (corporate parent),50
+Wholesale trade,114,18733.0,2.492150915283099,Firms (corporate parent),50
+Arts and recreation,80,15051.0,2.002314814814815,Firms (corporate parent),50
+Company management,10,14011.0,1.8639580672626648,Firms (corporate parent),50
+Utilities,5,7544.0,1.0036185610898256,Firms (corporate parent),50
+Agriculture,5,1135.0,0.150995104299702,Firms (corporate parent),50
+Unclassified,11,1058.0,0.14075138356747552,Firms (corporate parent),50
+Mining,1,226.0,0.03006598552575564,Firms (corporate parent),50
+Health care,27,65382.0,16.836450908491614,Firms (corporate parent),500
+Professional and technical,40,56033.0,14.428999629187095,Firms (corporate parent),500
+Accommodation and food,21,40036.0,10.309628775081373,Firms (corporate parent),500
+Finance and insurance,25,38035.0,9.794353343496354,Firms (corporate parent),500
+Retail trade,24,37762.0,9.724053397058217,Firms (corporate parent),500
+Education,12,29305.0,7.5463001112438715,Firms (corporate parent),500
+Manufacturing,26,27198.0,7.0037287297597945,Firms (corporate parent),500
+Transport and warehousing,7,14306.0,3.683923200527378,Firms (corporate parent),500
+Company management,3,13193.0,3.3973157265872853,Firms (corporate parent),500
+Real estate,11,11098.0,2.8578344526389516,Firms (corporate parent),500
+Administrative and support,6,9849.0,2.536205759960447,Firms (corporate parent),500
+Construction,6,9797.0,2.52281529397223,Firms (corporate parent),500
+Other services,9,8973.0,2.310627909851263,Firms (corporate parent),500
+Information,10,7812.0,2.0116600057682006,Firms (corporate parent),500
+Utilities,2,7251.0,1.8671974784722507,Firms (corporate parent),500
+Arts and recreation,7,6558.0,1.6887437682831363,Firms (corporate parent),500
+Wholesale trade,7,5748.0,1.4801615096205347,Firms (corporate parent),500
+Professional and technical,531,110334.0,16.697514002369925,Establishments (locations),50
+Health care,491,96083.0,14.540823661697294,Establishments (locations),50
+Finance and insurance,283,60340.0,9.131618493873159,Establishments (locations),50
+Education,596,60026.0,9.084098967736663,Establishments (locations),50
+Manufacturing,273,49889.0,7.550005221094431,Establishments (locations),50
+Retail trade,347,48478.0,7.336470025621197,Establishments (locations),50
+Accommodation and food,370,46963.0,7.107195878816127,Establishments (locations),50
+Information,217,25853.0,3.9124914305950083,Establishments (locations),50
+Transport and warehousing,114,23760.0,3.5957450350418667,Establishments (locations),50
+Other services,195,23660.0,3.5806114279920274,Establishments (locations),50
+Administrative and support,113,20668.0,3.12781390506083,Establishments (locations),50
+Real estate,124,18533.0,2.804711394546756,Establishments (locations),50
+Wholesale trade,114,16438.0,2.4876623268526186,Establishments (locations),50
+Arts and recreation,84,15073.0,2.281088590622309,Establishments (locations),50
+Construction,114,14627.0,2.213592703180025,Establishments (locations),50
+Unclassified,26,10833.0,1.639423651709114,Establishments (locations),50
+Company management,12,10395.0,1.573138452830817,Establishments (locations),50
+Utilities,6,7493.0,1.1339611762444743,Establishments (locations),50
+Agriculture,5,1135.0,0.17176644001567842,Establishments (locations),50
+Mining,1,200.0,0.03026721409967902,Establishments (locations),50
+Professional and technical,38,58710.0,22.369378602971153,Establishments (locations),500
+Health care,25,50316.0,19.17114041538233,Establishments (locations),500
+Finance and insurance,21,31573.0,12.029780116361918,Establishments (locations),500
+Manufacturing,30,22239.0,8.473388021656882,Establishments (locations),500
+Transport and warehousing,8,12620.0,4.808406710432566,Establishments (locations),500
+Accommodation and food,13,12349.0,4.705151701040551,Establishments (locations),500
+Administrative and support,6,9636.0,3.6714585627359906,Establishments (locations),500
+Company management,3,9600.0,3.6577420301230297,Establishments (locations),500
+Unclassified,1,8534.0,3.2515802588614515,Establishments (locations),500
+Utilities,3,7200.0,2.743306522592272,Establishments (locations),500
+Arts and recreation,7,6900.0,2.629002084150928,Establishments (locations),500
+Education,10,6729.0,2.563848554239361,Establishments (locations),500
+Information,7,5631.0,2.1454943095440395,Establishments (locations),500
+Retail trade,7,5320.0,2.0269987083598457,Establishments (locations),500
+Other services,6,5300.0,2.019378412463756,Establishments (locations),500
+Real estate,6,3600.0,1.371653261296136,Establishments (locations),500
+Construction,4,3100.0,1.181145863893895,Establishments (locations),500
+Wholesale trade,3,3100.0,1.181145863893895,Establishments (locations),500

@@ -1,0 +1,252 @@
+firm_id,company,naics2,naics3,sector,estabs,emp_all,emp_obs,sales,par_actual,corp6,has_parent,unclassified,rule_a,rule_b,rule_c,needs_review,in_central,in_conservative
+820452373,UNIVERSITY-CHICAGO BOARD-TRSTS,61,611,Education,74,19684.0,18551.0,1619714.0,8534,9406,True,False,False,True,False,False,True,False
+610835209,NORTHWESTERN MEMORIAL HOSP,62,622,Health care,103,10881.0,8948.0,1972980.0,9,36000,True,False,False,False,False,False,True,True
+007538044,UNITED AIRLINES HOLDINGS INC,48,481,Transport and warehousing,5,8146.0,8000.0,5025752.0,4000,107300,True,False,False,False,False,False,True,True
+448897181,JOHNSTON R BOWMAN HEALTH CTR,62,621,Health care,1,8000.0,8000.0,1663450.0,,,False,False,False,False,False,True,True,False
+001682400,MCDONALD'S CORP,72,722,Accommodation and food,113,7924.0,7431.0,469201.0,3000,150000,True,False,False,False,False,False,True,True
+005995907,JEWEL-OSCO,44,445,Retail trade,69,7241.0,6162.0,1798517.0,800,,True,False,False,False,False,False,True,True
+433090792,CNA FINANCIAL CORP,52,524,Finance and insurance,8,7212.0,7085.0,1492942.0,500,6500,True,False,False,True,False,False,True,False
+507636348,HEALTH CARE SVC CORP,52,524,Finance and insurance,4,7063.0,7001.0,1263825.0,5000,18000,True,False,False,False,False,False,True,True
+424821023,BAKER & MCKENZIE LLP,54,541,Professional and technical,3,7008.0,7005.0,175639.0,600,11000,True,False,False,False,False,False,True,True
+107286601,STATE STREET GLOBAL ADVISORS,52,523,Finance and insurance,1,7000.0,7000.0,2364894.0,3500,,True,False,True,False,False,False,False,False
+820310522,MT SINAI HOSPITAL,62,622,Health care,18,6789.0,6646.0,1258254.0,2200,3200,True,False,False,True,False,False,True,False
+497076042,ADVOCATE IL MASONIC MED CTR,62,622,Health care,132,6471.0,4377.0,1129305.0,16,2600,True,False,False,True,False,False,True,False
+402852537,ACCENTURE LIMITED,54,541,Professional and technical,3,6405.0,6400.0,1319193.0,5,,True,False,False,False,False,False,True,True
+412706689,BMO FINANCIAL CORP,55,551,Company management,34,6339.0,6256.0,3151708.0,3000,10505,True,False,False,False,False,False,True,True
+424806438,NORTHERN TRUST CORP,55,551,Company management,7,6048.0,6021.0,4226826.0,6000,23300,True,False,False,False,False,False,True,True
+552852329,EXELON CORP,22,221,Utilities,4,6027.0,6000.0,4485460.0,5000,20014,True,False,False,False,False,False,True,True
+400857322,CHICAGO MARRIOTT DOWNTOWN,72,721,Accommodation and food,39,5950.0,4942.0,564391.0,3000,,True,False,False,False,False,False,True,True
+214490476,MERRY MAIDS,23,238,Construction,582,5918.0,3927.0,357091.0,22,,True,False,False,False,True,False,True,False
+001122381,DELOITTE,54,541,Professional and technical,2,5006.0,5000.0,990245.0,400,,True,False,False,False,False,False,True,True
+726216376,ODYSSEY CRUISES CHICAGO,56,561,Administrative and support,1,5000.0,5000.0,1084727.0,,,False,False,False,False,False,True,True,False
+434496131,PALMER HOUSE A HILTON HOTEL,72,721,Accommodation and food,33,4659.0,4282.0,438170.0,,,True,False,False,False,False,False,True,True
+009382458,CHARMS CO,31,311,Manufacturing,7,4083.0,3900.0,619689.0,650,2300,True,False,False,True,False,False,True,False
+407427249,ANN-ROBERT H LURIE CHILDREN'S,62,622,Health care,6,4053.0,4031.0,714014.0,4002,,True,False,False,False,False,False,True,True
+001174812,DLA PIPER LLP,54,541,Professional and technical,1,4036.0,4036.0,1165910.0,500,,True,False,True,False,False,False,False,False
+458537792,SINAI MEDICAL GROUP,62,621,Health care,1,4000.0,4000.0,831725.0,,,False,False,False,False,False,True,True,False
+002937415,TARGET,45,452,Retail trade,23,3780.0,2259.0,589057.0,5000,,True,False,False,False,False,False,True,True
+441363611,HYATT REGENCY CHICAGO,72,721,Accommodation and food,19,3756.0,3474.0,354277.0,400,52000,True,False,False,False,False,False,True,True
+001330802,MAYER BROWN,54,541,Professional and technical,4,3645.0,3501.0,1057005.0,1000,1200,True,False,False,True,False,False,True,False
+007521503,MARIANO'S,44,445,Retail trade,39,3434.0,1331.0,949774.0,1200,,True,False,False,False,False,False,True,True
+004557500,LEO BURNETT CO INC,54,541,Professional and technical,2,3254.0,3254.0,724912.0,2254,10000,True,False,False,False,False,False,True,True
+400827357,ST MARY OF NAZARETH HOSPITAL,62,622,Health care,11,3168.0,3044.0,550013.0,,,True,False,False,False,False,False,True,True
+440458614,NORTHWESTERN MEMORIAL PHYS GRP,62,621,Health care,1,3000.0,3000.0,623794.0,,,False,False,False,False,False,True,True,False
+007539588,WALGREENS,44,446,Retail trade,117,2942.0,2448.0,693513.0,6100,20000,True,False,False,False,False,False,True,True
+007526478,BANK OF AMERICA,52,522,Finance and insurance,68,2894.0,2601.0,948364.0,5000,,True,False,False,False,False,False,True,True
+303651459,STARBUCKS,72,722,Accommodation and food,185,2423.0,1353.0,143002.0,2000,,True,False,False,False,False,False,True,True
+801407271,AMTRAK MARKETING DEPT,48,485,Transport and warehousing,3,2418.0,2400.0,862008.0,389,,True,False,False,False,False,False,True,True
+467049706,ASCENSION ST JOSEPH-CHICAGO,62,622,Health care,25,2412.0,2145.0,375485.0,200,12000,True,False,False,False,False,False,True,True
+007556426,HOME DEPOT,44,444,Retail trade,23,2199.0,1691.0,771173.0,10000,,True,False,False,False,False,False,True,True
+738425337,LOYOLA UNIVERSITY CHICAGO,61,611,Education,10,2173.0,2007.0,1550.0,,,True,False,False,False,False,False,True,True
+007529209,QUAKER OATS CO,31,311,Manufacturing,3,2172.0,2100.0,2232436.0,1800,11858,True,False,False,False,False,False,True,True
+151554573,SHAW'S CRAB HOUSE,72,722,Accommodation and food,43,2077.0,1486.0,129742.0,75,4500,True,False,False,False,False,False,True,True
+007528383,UBS FINANCIAL SVC,52,523,Finance and insurance,13,2071.0,2000.0,690887.0,2500,,True,False,False,False,False,False,True,True
+404702791,INSUREON,52,524,Finance and insurance,1,2004.0,2004.0,359045.0,20,,True,False,True,False,False,False,False,False
+009317371,S & C ELECTRIC CO,42,423,Wholesale trade,1,2000.0,2000.0,2084190.0,2000,,True,False,False,False,False,False,True,True
+417443926,UNITED CENTER,71,711,Arts and recreation,1,2000.0,2000.0,539541.0,,,False,False,False,False,False,True,True,False
+720908038,MASONIC MEDICAL CTR-PATIENT,62,621,Health care,1,2000.0,2000.0,258304.0,,,False,False,False,False,False,True,True,False
+804424223,SP PLUS CORP,81,812,Other services,297,1982.0,454.0,228600.0,,19900,True,False,False,False,False,False,True,True
+886012012,WHOLE FOODS MARKET,44,445,Retail trade,45,1960.0,1664.0,493143.0,200,,True,False,False,False,False,False,True,True
+820154003,JONES LANG LASALLE INC,53,531,Real estate,20,1919.0,1842.0,253636.0,700,112100,True,False,False,False,False,False,True,True
+004586681,MACY'S,45,452,Retail trade,12,1916.0,1830.0,314816.0,750,,True,False,False,False,False,False,True,True
+004630315,DDB CHICAGO,54,541,Professional and technical,19,1826.0,1408.0,416969.0,125,,True,False,False,False,False,False,True,True
+009287483,TEMPEL STEEL CO,23,238,Construction,1,1800.0,1800.0,294312.0,250,,True,False,True,False,False,False,False,False
+510184948,INTERCONTINENTAL CHICAGO,72,721,Accommodation and food,13,1786.0,1747.0,166370.0,1600,,True,False,False,False,False,False,True,True
+806920021,MARSH & MC LENNAN AGENCY,52,524,Finance and insurance,8,1735.0,1620.0,330426.0,4000,,True,False,False,False,False,False,True,True
+006407589,PRICEWATERHOUSE COOPERS,52,523,Finance and insurance,3,1714.0,1700.0,577805.0,1000,,True,False,False,False,False,False,True,True
+009450149,DART CONTAINER SOLO,32,322,Manufacturing,1,1700.0,1700.0,263771.0,1000,,True,False,True,False,False,False,False,False
+403476608,BAGCRAFT PACKAGING,32,322,Manufacturing,38,1684.0,984.0,351085.0,19,1600,True,False,False,True,False,False,True,False
+401637651,INSIGHT HOSPITAL & MEDICAL CTR,62,622,Health care,10,1675.0,1613.0,297352.0,,,True,False,False,False,False,False,True,True
+900703026,SUN-TIMES MEDIA HOLDINGS LLC,51,511,Information,4,1648.0,1642.0,211064.0,1492,2322,True,False,False,False,False,False,True,True
+457910685,CIRCANA INC,54,541,Professional and technical,16,1608.0,1564.0,76505.0,40,18000,True,False,False,False,False,False,True,True
+742688354,NORTHEASTERN IL UNIV FNDTN,54,541,Professional and technical,5,1553.0,1527.0,812.0,,,True,False,False,False,False,False,True,True
+004654984,SECURITAS INC,56,561,Administrative and support,2,1511.0,1500.0,79090.0,250,,True,False,False,False,False,False,True,True
+005761499,SARGENT & LUNDY LLC,54,541,Professional and technical,1,1500.0,1500.0,366440.0,,,True,False,False,False,False,False,True,True
+003869476,UPS CUSTOMER CTR,54,541,Professional and technical,158,1471.0,703.0,293923.0,2200,,True,False,False,False,False,False,True,True
+007538564,UNITED STATES GYPSUM CO,32,327,Manufacturing,3,1469.0,1400.0,493185.0,600,7300,True,False,False,False,False,False,True,True
+959792284,TACO BELL,72,722,Accommodation and food,75,1462.0,903.0,85339.0,1000,,True,False,False,False,False,False,True,True
+007502875,ARCHER-DANIELS-MIDLAND CO,31,311,Manufacturing,5,1440.0,1430.0,1378969.0,1200,44043,True,False,False,False,False,False,True,True
+424597185,SKIDMORE OWINGS & MERRILL LLP,54,541,Professional and technical,1,1400.0,1400.0,265233.0,,,False,False,False,False,False,True,True,False
+680258050,EQ OFFICE,53,531,Real estate,49,1366.0,737.0,315831.0,350,1001,True,False,False,True,False,False,True,False
+678851924,DOLLAR TREE,45,452,Retail trade,124,1353.0,952.0,203875.0,600,,True,False,False,False,False,False,True,True
+421766768,BAIRD & WARNER REAL ESTATE,53,531,Real estate,10,1325.0,1074.0,175002.0,55,1800,True,False,False,False,False,False,True,True
+400624805,OAK STREET HEALTH PORTAGE PARK,62,621,Health care,87,1319.0,525.0,262210.0,3000,6000,True,False,False,False,False,False,True,True
+422011576,BURGER KING,72,722,Accommodation and food,46,1316.0,1050.0,76160.0,1000,,True,False,False,False,False,False,True,True
+884499294,COMMUNITY FIRST MEDICAL CTR,62,622,Health care,3,1302.0,1200.0,226122.0,1200,,True,False,False,False,False,False,True,True
+433570033,KPMG,54,541,Professional and technical,1,1300.0,1300.0,257155.0,2000,,True,False,False,False,False,False,True,True
+789889894,ALLIANCE GROUND INTL,48,488,Transport and warehousing,4,1259.0,1250.0,308992.0,,,True,False,False,False,False,False,True,True
+433091519,CHASE,52,522,Finance and insurance,82,1251.0,1043.0,345224.0,5000,,True,False,False,False,False,False,True,True
+496971326,AMERICAN MEDICAL ASSN,81,813,Other services,4,1235.0,1230.0,23292.0,1100,,True,False,False,False,False,False,True,True
+832371389,PEOPLES GAS,22,221,Utilities,6,1224.0,1200.0,281110.0,3000,1520,True,False,False,False,False,False,True,True
+005889993,WALMART SUPERCENTER,45,452,Retail trade,19,1217.0,870.0,189549.0,11000,,True,False,False,False,False,False,True,True
+860048156,MONDELEZ INTERNATIONAL INC,31,311,Manufacturing,2,1203.0,1200.0,535178.0,1200,90000,True,False,False,False,False,False,True,True
+713858228,AT WORLD PROPERTIES LLC,53,531,Real estate,14,1185.0,1148.0,156340.0,,,True,False,False,False,False,False,True,True
+001330794,SEYFARTH SHAW LLP,54,541,Professional and technical,4,1140.0,1001.0,301879.0,1001,1200,True,False,False,False,False,False,True,True
+434533054,TRANSUNION INTERMEDIATE HLDNGS,56,561,Administrative and support,4,1139.0,1100.0,567302.0,,13400,True,False,False,False,False,False,True,True
+002363950,BHHS CHICAGO,53,531,Real estate,31,1138.0,996.0,288337.0,25,20000,True,False,False,False,False,False,True,True
+416148006,JAMESON SOTHEBY'S INTL REALTY,53,531,Real estate,29,1135.0,944.0,148386.0,2100,,True,False,False,False,False,False,True,True
+458460003,CBOE FUTURES EXCHANGE LLC,52,523,Finance and insurance,7,1116.0,900.0,1025353.0,,1685,True,False,False,False,False,False,True,True
+367784493,ROCKFON LLC,33,332,Manufacturing,1,1112.0,1112.0,262480.0,1112,,True,False,False,False,False,False,True,True
+582011136,UNI CARE LIFE & HEALTH INS CO,52,524,Finance and insurance,3,1105.0,1100.0,192976.0,250,200,True,False,False,True,False,False,True,False
+416870134,PATRICK J MCNERNEY MEYER BROWN,54,541,Professional and technical,1,1105.0,1105.0,319210.0,,,False,False,False,False,False,True,True,False
+385902457,EDSAL MANUFACTURING CO INC,33,337,Manufacturing,2,1105.0,1100.0,217113.0,7,,True,False,False,False,False,False,True,True
+721488907,DEPAUL UNIVERSITY-LOOP CAMPUS,61,611,Education,4,1089.0,1001.0,9025.0,,,True,False,False,False,False,False,True,True
+200026573,ALDI,44,445,Retail trade,34,1061.0,0.0,195512.0,150,,True,False,False,False,False,False,True,True
+237855895,MATTRESS FIRM,44,442,Retail trade,14,1061.0,1004.0,291235.0,200,,True,False,False,False,False,False,True,True
+007656051,GREAT DANE TRAILERS,33,336,Manufacturing,3,1055.0,1050.0,265917.0,50,4000,True,False,False,False,False,False,True,True
+746795206,RATE,52,522,Finance and insurance,21,1037.0,957.0,410775.0,,10000,True,False,False,False,False,False,True,True
+224249342,POTBELLY CORP,72,722,Accommodation and food,51,1036.0,742.0,61481.0,200,5000,True,False,False,False,False,False,True,True
+003901832,AON CORP,52,524,Finance and insurance,6,1029.0,1013.0,185169.0,1001,62000,True,False,False,False,False,False,True,True
+467853073,KIRKLAND & ELLIS LLP,54,541,Professional and technical,3,1009.0,1000.0,291768.0,1000,,True,False,False,False,False,False,True,True
+557193513,CHIPOTLE MEXICAN GRILL,72,722,Accommodation and food,43,1008.0,634.0,56155.0,160,,True,False,False,False,False,False,True,True
+611335779,MOTOROLA MOBILITY HOLDINGS LLC,33,334,Manufacturing,1,1001.0,1001.0,391493.0,2000,3500,True,False,False,False,False,False,True,True
+401537560,MC AULEY RESIDENCE,62,623,Health care,1,1000.0,1000.0,0.0,,,False,False,False,False,False,True,True,False
+367209509,CLARK CONSTRUCTION GROUP,23,236,Construction,1,1000.0,1000.0,333532.0,1,,True,False,True,False,False,False,False,False
+410776136,INPUT CENTER INC,56,561,Administrative and support,1,1000.0,1000.0,124373.0,,,False,False,False,False,False,True,True,False
+148003965,RSM US LLP,54,541,Professional and technical,1,1000.0,1000.0,197812.0,1000,13000,True,False,False,False,False,False,True,True
+438897461,FAIRMONT CHICAGO-MILLENNIUM,72,721,Accommodation and food,3,1000.0,1000.0,94473.0,30,,True,False,False,False,False,False,True,True
+400403224,ISMS DIVISION OF SPECIALTY SVC,23,236,Construction,1,1000.0,1000.0,333532.0,,,False,False,False,False,False,True,True,False
+367448727,NORCON INC,23,236,Construction,1,1000.0,1000.0,333532.0,,,False,False,False,False,False,True,True,False
+151796745,MISERICORDIA HOME,81,813,Other services,1,1000.0,1000.0,0.0,,,False,False,False,False,False,True,True,False
+458512076,AMERICAN MEDICAL ASSOC,81,813,Other services,1,1000.0,1000.0,0.0,,,False,False,False,False,False,True,True,False
+533767356,SIDLEY AUSTIN LLP,54,541,Professional and technical,1,1000.0,1000.0,288878.0,1000,3585,True,False,False,False,False,False,True,True
+007500598,MILLER COORS LLC,42,424,Wholesale trade,3,1000.0,1000.0,800835.0,200,16800,True,False,False,False,False,False,True,True
+720809648,AMAZING CHICAGO'S FUNHOUSE MZ,71,713,Arts and recreation,1,1000.0,1000.0,129545.0,,,False,False,False,False,False,True,True,False
+610824542,AMER ASSOCIATION OF MEDICAL,81,813,Other services,1,1000.0,1000.0,0.0,,,False,False,False,False,False,True,True,False
+475652731,CHICAGO SYMPHONY CTR,71,711,Arts and recreation,1,1000.0,1000.0,76080.0,,,False,False,False,False,False,True,True,False
+713247635,THOREK MEMORIAL HOSP ANDRSNVLL,62,622,Health care,5,998.0,926.0,177138.0,,,True,False,False,False,False,False,True,True
+748156067,COLUMBIA COLLEGE CHICAGO,61,611,Education,7,979.0,881.0,1207.0,,,True,False,False,False,False,False,True,True
+539863209,TRUE VALUE CO,44,444,Retail trade,16,978.0,974.0,136809.0,16,35001,True,False,False,False,False,False,True,True
+006131684,NORDSTROM,45,452,Retail trade,7,959.0,790.0,155614.0,901,,True,False,False,False,False,False,True,True
+402888671,WILLIAM BLAIR & CO LLC,52,523,Finance and insurance,1,920.0,920.0,654743.0,920,,True,False,False,False,False,False,True,True
+001334648,WINSTON & STRAWN LLP,54,541,Professional and technical,2,907.0,900.0,261146.0,900,1200,True,False,False,False,False,False,True,True
+592127328,WILLIS TOWERS WATSON,52,524,Finance and insurance,2,903.0,900.0,161786.0,50,,True,False,False,False,False,False,True,True
+104275698,DD'S DISCOUNTS,45,452,Retail trade,21,901.0,190.0,108127.0,500,,True,False,False,False,False,False,True,True
+820362325,VEDDER PRICE PC,54,541,Professional and technical,1,900.0,900.0,259990.0,900,,True,False,False,False,False,False,True,True
+006961734,OSI INDUSTRIES LLC,31,311,Manufacturing,2,900.0,900.0,450198.0,100,,True,False,False,False,False,False,True,True
+408172047,ILLINOIS INSTITUTE-TECH CAMPUS,61,611,Education,1,900.0,900.0,111936.0,,,False,False,False,False,False,False,True,True
+151162567,FREEDMAN SEATING CO,33,335,Manufacturing,1,900.0,900.0,214629.0,,,False,False,False,False,False,False,True,True
+001332337,JENNER & BLOCK LLP,54,541,Professional and technical,2,900.0,900.0,259990.0,500,1500,True,False,False,False,False,False,True,True
+006529671,OMNIMAX THEATER,51,512,Information,2,900.0,900.0,41225.0,300,,True,False,False,False,False,False,True,True
+628493280,OZINGA,44,444,Retail trade,8,898.0,844.0,295988.0,3,,True,False,False,False,False,False,True,True
+839897758,TJ MAXX,45,452,Retail trade,20,890.0,429.0,139875.0,1700,,True,False,False,False,False,False,True,True
+439851547,ST ANTHONY HOSPITAL,62,622,Health care,2,871.0,825.0,153570.0,825,,True,False,False,False,False,False,True,True
+308577089,LA FITNESS,71,713,Arts and recreation,22,858.0,757.0,45042.0,15,,True,False,False,False,False,False,True,True
+151625449,ALDEN WENTWORTH REHABILITATION,62,624,Health care,8,830.0,807.0,36929.0,125,,True,False,False,False,False,False,True,True
+639356617,EDELMAN,54,541,Professional and technical,8,819.0,674.0,177124.0,25,4500,True,False,False,False,False,False,True,True
+738425559,NORTH PARK UNIVERSITY,61,611,Education,2,815.0,800.0,0.0,,,True,False,False,False,False,False,True,True
+151011921,YMCA OF THE USA,62,624,Health care,9,815.0,800.0,43885.0,300,975,True,False,False,False,False,False,True,True
+967328584,WINTRUST WEALTH MANAGEMENT,52,523,Finance and insurance,56,814.0,614.0,269254.0,62,300,True,False,False,True,False,False,True,False
+458545811,ST BERNARD HOSPITAL,62,622,Health care,5,812.0,756.0,140312.0,750,,True,False,False,False,False,False,True,True
+510390404,CIBC BANCORP USA INC,55,551,Company management,7,806.0,770.0,483294.0,600,1883,True,False,False,False,False,False,True,True
+007525504,MOTOROLA SOLUTIONS INC,33,334,Manufacturing,2,806.0,800.0,263426.0,800,21000,True,False,False,False,False,False,True,True
+121698195,IBEW,81,813,Other services,72,802.0,646.0,30847.0,500,,True,False,False,False,False,False,True,True
+581069010,HEARTLAND ALLIANCE-HUMAN NEEDS,81,813,Other services,13,795.0,712.0,3481.0,600,,True,False,False,False,False,False,True,True
+742896291,ISI TELEMANAGEMENT SOLUTIONS,51,511,Information,1,789.0,789.0,325389.0,,,False,False,False,False,False,False,True,True
+680181153,GEOMETRY GLOBAL,54,541,Professional and technical,13,786.0,474.0,161433.0,100,,True,False,False,False,False,False,True,True
+423671866,WENDY'S,72,722,Accommodation and food,26,784.0,580.0,45791.0,700,,True,False,False,False,False,False,True,True
+156647240,POPEYES,72,722,Accommodation and food,37,783.0,669.0,47403.0,160,,True,False,False,False,False,False,True,True
+583360797,ARCHER-WESTERN CONTRACTORS LTD,23,238,Construction,5,779.0,750.0,202710.0,11,5000,True,False,False,False,False,False,True,True
+612771964,WESTERN UNION AGENT LOCATION,52,522,Finance and insurance,159,776.0,124.0,548299.0,6000,,True,False,False,False,False,False,True,True
+003583366,ARCELORMITTAL,33,331,Manufacturing,6,768.0,720.0,254921.0,300,6424,True,False,False,False,False,False,True,True
+004612941,BLUE CROSS & BLUE SHIELD ASSN,52,524,Finance and insurance,1,765.0,765.0,137061.0,,150000,True,False,False,False,False,False,True,True
+793946125,WEISS MEMORIAL HOSPITAL,62,622,Health care,2,756.0,732.0,133294.0,,,True,False,False,False,False,False,True,True
+750307570,LESSEN,51,511,Information,1,750.0,750.0,309305.0,,,True,False,False,False,False,False,True,True
+402325170,COGNITIVE TPG,33,333,Manufacturing,1,750.0,750.0,91371.0,4,1594,True,False,True,False,False,False,False,False
+475717922,PRITZKER SCHOOL OF MEDICINE,61,611,Education,1,750.0,750.0,0.0,,,False,False,False,False,False,False,True,True
+736347633,FARMER'S FRIDGE,45,454,Retail trade,67,748.0,0.0,114731.0,,,True,False,False,False,False,False,True,True
+354872905,BALYASNY ASSET MANAGEMENT LP,52,523,Finance and insurance,1,746.0,746.0,252031.0,,,True,False,False,False,False,False,True,True
+433461118,NUVEEN SECURITIES LLC,52,523,Finance and insurance,6,745.0,700.0,362349.0,5000,902,True,False,False,False,False,False,True,True
+448968354,JACKSON PARK HOSPITAL,62,622,Health care,5,739.0,719.0,126095.0,700,,True,False,False,False,False,False,True,True
+475696241,HUMBOLDT PARK HEALTH,62,622,Health care,3,738.0,714.0,130026.0,712,,True,False,False,False,False,False,True,True
+683857213,RR DONNELLEY & SONS CO,32,323,Manufacturing,2,731.0,725.0,123101.0,,32000,True,False,False,False,False,False,True,True
+441317252,DEUTSCHE BANK,52,522,Finance and insurance,3,724.0,720.0,230020.0,1600,,True,False,False,False,False,False,True,True
+433354362,ECHO GLOBAL LOGISTICS INC,48,488,Transport and warehousing,7,722.0,703.0,526856.0,20,2593,True,False,False,False,False,False,True,True
+007523475,WM WRIGLEY JR CO,31,311,Manufacturing,18,718.0,671.0,155262.0,100,16400,True,False,False,False,False,False,True,True
+901786970,DRAPER-KRAMER RESIDENTAL,53,531,Real estate,10,716.0,696.0,109081.0,250,1800,True,False,False,False,False,False,True,True
+230228082,REDWOOD LOGISTICS,48,484,Transport and warehousing,4,715.0,715.0,164820.0,50,,True,False,False,False,False,False,True,True
+415115285,ATLAS TUBE,33,331,Manufacturing,5,705.0,500.0,328441.0,100,,True,False,False,False,False,False,True,True
+694674151,IHEARTMEDIA,51,515,Information,10,703.0,436.0,136869.0,60,,True,False,False,False,False,False,True,True
+001330497,MCDERMOTT WILL & EMERY,54,541,Professional and technical,1,700.0,700.0,202215.0,700,1200,True,False,False,False,False,False,True,True
+367344579,NORTHWESTERN MEDICINE,54,541,Professional and technical,1,700.0,700.0,138469.0,,,False,False,False,False,False,False,True,True
+005863311,7-ELEVEN,44,445,Retail trade,99,698.0,531.0,177653.0,800,,True,False,False,False,False,False,True,True
+617356803,WFMT,54,541,Professional and technical,4,698.0,580.0,222269.0,15,,True,False,False,False,False,False,True,True
+988440806,NEWSNATION,51,515,Information,4,697.0,530.0,180823.0,51,,True,False,False,False,False,False,True,True
+441427713,WHITE CASTLE,72,722,Accommodation and food,20,688.0,688.0,41501.0,201,,True,False,False,False,False,False,True,True
+977518554,REPUBLIC SERVICES OF CHICAGO,56,562,Administrative and support,8,671.0,560.0,176887.0,100,,True,False,False,False,False,False,True,True
+310007406,LOWE'S HOME IMPROVEMENT,44,444,Retail trade,5,666.0,410.0,206825.0,1800,,True,False,False,False,False,False,True,True
+003607868,WEBER SHANDWICK,54,541,Professional and technical,6,663.0,619.0,146745.0,300,450,True,False,False,True,False,False,True,False
+001161124,FAEGRE DRINKER BIDDLE-REATH,54,541,Professional and technical,2,660.0,660.0,190660.0,8,,True,False,False,False,False,False,True,True
+003678943,CITIBANK,52,522,Finance and insurance,23,657.0,582.0,204168.0,300,,True,False,False,False,False,False,True,True
+722498934,MOODY BIBLE INSTITUTE,61,611,Education,3,651.0,640.0,0.0,,,True,False,False,False,False,False,True,True
+441311800,COSTCO WHOLESALE,45,452,Retail trade,10,650.0,607.0,109808.0,4000,,True,False,False,False,False,False,True,True
+433350857,AUTOKINITON,33,336,Manufacturing,2,650.0,650.0,255176.0,25,,True,False,False,False,False,False,True,True
+001250919,JONES DAY,54,541,Professional and technical,2,650.0,650.0,187772.0,1100,,True,False,False,False,False,False,True,True
+004607974,UNITED STATES CELLULAR CORP,51,517,Information,2,640.0,640.0,613004.0,40,7900,True,False,False,False,False,False,True,True
+852815976,SAKS FIFTH AVENUE,45,452,Retail trade,6,637.0,355.0,89125.0,233,,True,False,False,False,False,False,True,True
+314638263,BUBBA GUMP SHRIMP CO,72,722,Accommodation and food,5,636.0,433.0,38279.0,200,,True,False,False,False,False,False,True,True
+007567704,ADTALEM GLOBAL EDUCATION INC,61,611,Education,1,636.0,636.0,0.0,636,9938,True,False,False,False,False,False,True,True
+652242033,GIORDANO'S,72,722,Accommodation and food,20,634.0,579.0,40800.0,,,True,False,False,False,False,False,True,True
+738425989,ROOSEVELT UNIVERSITY,61,611,Education,3,628.0,600.0,344.0,,,True,False,False,False,False,False,True,True
+009322777,METHODE ELECTRONICS INC,33,334,Manufacturing,2,627.0,627.0,118442.0,600,6500,True,False,False,False,False,False,True,True
+462148875,MORGAN STANLEY WEALTH MGMT,52,523,Finance and insurance,50,620.0,503.0,243180.0,1150,,True,False,False,False,False,False,True,True
+004713574,ARDAGH GROUP,32,327,Manufacturing,2,620.0,620.0,151011.0,300,,True,False,False,False,False,False,True,True
+622551794,GRANT THORNTON LLP,54,541,Professional and technical,4,618.0,601.0,121026.0,601,62000,True,False,False,False,False,False,True,True
+466104361,SALVATION ARMY KROC CTR,62,624,Health care,23,617.0,579.0,147960.0,103,,True,False,False,False,False,False,True,True
+007509045,CONAGRA BRANDS INC,31,311,Manufacturing,3,615.0,500.0,302662.0,500,18300,True,False,False,False,False,False,True,True
+884301763,CUSHMAN & WAKEFIELD,53,531,Real estate,3,613.0,600.0,80086.0,600,53000,True,False,False,False,False,False,True,True
+686514902,VIENNA BEEF LTD,31,311,Manufacturing,3,609.0,500.0,284091.0,500,,True,False,False,False,False,False,True,True
+004620738,H&R BLOCK,54,541,Professional and technical,66,608.0,452.0,15720.0,2000,,True,False,False,False,False,False,True,True
+404918287,WALSH'DEMARIA JOINT VENTURE,23,236,Construction,1,600.0,600.0,200119.0,,,False,False,False,False,False,False,True,True
+417273296,55 ERIE INVESTORS LLC,53,531,Real estate,1,600.0,600.0,147184.0,,,False,False,False,False,False,False,True,True
+009093030,GENERAL FOODS CORP,42,424,Wholesale trade,1,600.0,600.0,1104670.0,,,False,False,False,False,False,False,True,True
+820734093,NATIONAL ASSOCIATION-BAR,81,813,Other services,1,600.0,600.0,0.0,,,False,False,False,False,False,False,True,True
+259743649,BEARINGPOINT,54,541,Professional and technical,1,600.0,600.0,123578.0,,,False,False,False,False,False,False,True,True
+975296526,EAST BANK CLUB,71,713,Arts and recreation,1,600.0,600.0,31711.0,,,False,False,False,False,False,False,True,True
+891739385,ARIE CROWN THEATER,71,711,Arts and recreation,1,600.0,600.0,45648.0,,,False,False,False,False,False,False,True,True
+237616735,MIDWAY MOVING,53,531,Real estate,1,600.0,600.0,98315.0,,,False,False,False,False,False,False,True,True
+418285359,FERRARA CANDY CO,31,311,Manufacturing,1,600.0,600.0,81717.0,600,,True,False,False,False,False,False,True,True
+890292881,CRAIN COMMUNICATIONS INC,51,511,Information,6,598.0,433.0,151098.0,300,,True,False,False,False,False,False,True,True
+007526346,FRESENIUS KIDNEY CARE,62,621,Health care,33,597.0,473.0,120856.0,1001,,True,False,False,False,False,False,True,True
+007503576,NEWARK,42,423,Wholesale trade,3,574.0,560.0,761924.0,900,5000,True,False,False,False,False,False,True,True
+007533805,JIFFY LUBE,81,811,Other services,94,559.0,356.0,290147.0,3200,,True,False,False,False,False,False,True,True
+402946685,ALLSTATE INSURANCE,52,524,Finance and insurance,113,558.0,307.0,101035.0,12000,,True,False,False,False,False,False,True,True
+655861375,SUPERIOR GRAPHITE CO,33,335,Manufacturing,2,552.0,552.0,129694.0,500,,True,False,False,False,False,False,True,True
+599085917,THYSSENKRUPP NORTH AMERICA,33,332,Manufacturing,2,550.0,501.0,92690.0,501,19200,True,False,False,False,False,False,True,True
+684383862,CCH INC,51,511,Information,2,550.0,550.0,212661.0,300,,True,False,False,False,False,False,True,True
+313028979,FOUR SEASONS HOTEL CHICAGO,72,721,Accommodation and food,1,550.0,550.0,51959.0,,,False,False,False,False,False,False,True,True
+005235973,PNC BANK,52,522,Finance and insurance,61,544.0,411.0,146365.0,6000,,True,False,False,False,False,False,True,True
+007518103,PROVISUR TECHNOLOGIES INC,42,423,Wholesale trade,4,544.0,544.0,339118.0,90,5100,True,False,False,False,False,False,True,True
+441324175,TRUMP INTERNATIONAL HOTEL,72,721,Accommodation and food,2,540.0,540.0,48594.0,50,,True,False,False,False,False,False,True,True
+507958353,T-MOBILE,51,517,Information,109,537.0,258.0,504053.0,150,,True,False,False,False,False,False,True,True
+749710524,PROVIDENCE BANK & TRUST,52,522,Finance and insurance,3,536.0,536.0,167932.0,,,True,False,False,False,False,False,True,True
+716158773,PETE'S FRESH MARKET,44,445,Retail trade,8,536.0,502.0,136212.0,,,True,False,False,False,False,False,True,True
+713001966,HOWARD ORLOFF IMPORTS INC,44,441,Retail trade,4,536.0,320.0,267200.0,,,True,False,False,False,False,False,True,True
+807279781,PERKINS EASTMAN ARCHITECTS,54,541,Professional and technical,2,534.0,534.0,101169.0,500,,True,False,False,False,False,False,True,True
+533721700,STARCOM MEDIAVEST GROUP,54,541,Professional and technical,4,533.0,519.0,122716.0,20,,True,False,False,False,False,False,True,True
+006501621,CONSTELLATION BRANDS,42,425,Wholesale trade,2,530.0,530.0,796479.0,230,,True,False,False,False,False,False,True,True
+461050437,SMITHBUCKLIN,56,561,Administrative and support,3,528.0,528.0,115817.0,500,,True,False,False,False,False,False,True,True
+712073164,DHL GLOBAL FORWARDING,48,488,Transport and warehousing,5,526.0,502.0,126053.0,,,True,False,False,False,False,False,True,True
+006531438,SOUTH SHORE HOSPITAL,62,622,Health care,3,526.0,502.0,93577.0,501,,True,False,False,False,False,False,True,True
+311225726,DOMINO'S,72,722,Accommodation and food,35,524.0,320.0,20966.0,,,True,False,False,False,False,False,True,True
+441443769,KOMATSU AMERICA CORP,33,333,Manufacturing,3,523.0,520.0,188076.0,500,2090,True,False,False,False,False,False,True,True
+416591443,BELT RAILWAY CO-CHICAGO YARD,48,482,Transport and warehousing,1,520.0,520.0,125607.0,,,False,False,False,False,False,False,True,True
+775656482,KINDRED HOSPITAL CHICAGO NORTH,62,622,Health care,2,512.0,512.0,90274.0,,,True,False,False,False,False,False,True,True
+422144316,CHICAGO TRIBUNE DIRECT,54,541,Professional and technical,7,512.0,390.0,104257.0,19,2865,True,False,False,False,False,False,True,True
+854356029,BOSTON CONSULTING GROUP,54,541,Professional and technical,3,508.0,500.0,104630.0,250,,True,False,False,False,False,False,True,True
+470626524,CHAPMAN & CUTLER LLP,54,541,Professional and technical,2,504.0,500.0,145595.0,500,550,True,False,False,False,False,False,True,True
+005763008,AT KEARNEY INC,54,541,Professional and technical,2,503.0,500.0,103600.0,500,3000,True,False,False,False,False,False,True,True
+446751315,AUTOZONE,44,441,Retail trade,44,501.0,456.0,78580.0,900,,True,False,False,False,False,False,True,True
+005763628,GATX CORP,53,532,Real estate,3,501.0,480.0,2001681.0,300,2150,True,False,False,False,False,False,True,True
+001260249,ACCESS COMMUNITY HEALTH,62,621,Health care,1,501.0,501.0,104174.0,2500,,True,False,False,False,False,False,True,True
+700457830,FOUR SEASONS HTG & AIR COND,23,238,Construction,1,500.0,500.0,81754.0,,,False,False,False,False,False,False,True,True
+974030587,SRA MC GRAW-HILL,61,611,Education,1,500.0,500.0,0.0,,,False,False,False,False,False,False,True,True
+151012028,ZACKS INVESTMENT RESEARCH INC,52,523,Finance and insurance,1,500.0,500.0,168921.0,,,False,False,False,False,False,False,True,True
+433572627,DIGITAS-CHICAGO,54,541,Professional and technical,1,500.0,500.0,115118.0,80,,True,False,True,False,False,False,False,False
+313554552,BAIN & CO,54,541,Professional and technical,1,500.0,500.0,102982.0,800,,True,False,False,False,False,False,True,True
+421855444,COMPSYCH EMPLOYEE ASSISTANCE,54,541,Professional and technical,1,500.0,500.0,102982.0,,,False,False,False,False,False,False,True,True
+217200021,COLEMAN NATURAL MEATS,42,424,Wholesale trade,1,500.0,500.0,754943.0,,,False,False,False,False,False,False,True,True
+434239930,PENINSULA CHICAGO,72,721,Accommodation and food,1,500.0,500.0,47236.0,,,False,False,False,False,False,False,True,True
+434093017,LINCOLN PARK ZOO,71,712,Arts and recreation,1,500.0,500.0,0.0,,,False,False,False,False,False,False,True,True
+227324787,SKADDEN ARPS SLATE MEAGHER,54,541,Professional and technical,1,500.0,500.0,144439.0,3000,,True,False,False,False,False,False,True,True
+407401910,DIGESTIVE DISEASE EDUCATION CO,61,611,Education,1,500.0,500.0,0.0,,,False,False,False,False,False,False,True,True

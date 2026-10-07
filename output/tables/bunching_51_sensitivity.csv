@@ -1,0 +1,9 @@
+window,baseline,ratio_at_49
+"With the tax, 2003-2011","46-48 and 51-54, 51 included (published)",1.7691373025516404
+"With the tax, 2003-2011","46-48 and 52-54, 51 excluded",1.7430167597765365
+"With the tax, 2003-2011",46-48 only,1.5219512195121951
+"With the tax, 2003-2011",52-54 only,2.0392156862745097
+"Without the tax, 2014-2022","46-48 and 51-54, 51 included (published)",2.084188911704312
+"Without the tax, 2014-2022","46-48 and 52-54, 51 excluded",3.6024844720496896
+"Without the tax, 2014-2022",46-48 only,3.717948717948718
+"Without the tax, 2014-2022",52-54 only,3.4939759036144578

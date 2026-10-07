@@ -1,0 +1,3 @@
+tax,threshold,rate_per_month_nominal,per_employee_year_nominal,cliff_year_nominal,cpi_factor_to_2025,per_employee_year_2025usd,cliff_year_2025usd,ratio_per_employee_2025usd,ratio_cliff_2025usd,ratio_cliff_nominal
+Old tax (to 2011),50,4.0,48.0,2400.0,1.4312458044180867,68.69979861206816,3434.989930603408,5.764209037003444,57.642090370034445,82.5
+Proposal (2025),500,33.0,396.0,198000.0,1.0,396.0,198000.0,5.764209037003444,57.642090370034445,82.5

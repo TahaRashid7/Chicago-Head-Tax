@@ -18,7 +18,7 @@ Inputs (data/external/acs/, downloaded from data.census.gov, ACS 1-year):
             -> share of Chicago jobs held by Chicago residents
     B23022  (optional) work status by usual hours worked, metro area
             -> full-time share (usually 35+ hours per week)
-    output/tables/final_taxable_firms_2025.csv  firm-level base (10_final_analysis.py)
+    output/tables/taxable_base_2025.csv         firm-level base (26_build_base.py)
 
 Method, for each firm f in sector s:
     escaping employees = emp_f x wfh_s x (1 - rho)
@@ -41,7 +41,8 @@ still be taxable, so the adjusted scenarios understate revenue.
 
 Outputs:
     output/tables/census_parameters.csv            every parameter with its source
-    output/tables/revenue_remote_adjusted_2025.csv  tier x reading x scenario
+    output/tables/revenue_remote_adjusted_2025.csv  base x tier x reading x scenario
+                                                    (base: central, conservative, upper)
     output/tables/taxable_firms_2025_adjusted.csv   firm-level adjusted headcounts
 
 Usage:
@@ -65,7 +66,6 @@ TAB = ROOT / "output" / "tables"
 
 RATE_MONTHLY = 33.0
 THRESHOLD = 500
-LEGACY_IN_CHICAGO = 0.891   # only to reproduce the old figure as a check; not used
 
 # ACS industry groups -> two-digit NAICS sectors.
 GROUPS = {
@@ -212,22 +212,22 @@ def main() -> None:
     log(f"  full-time share ............ {ft:.3f}" if ft is not None else
         "  full-time share ............ B23022 not found; full-time reading skipped")
 
-    # ---- firms
-    firms = pd.read_csv(TAB / "final_taxable_firms_2025.csv", dtype={"naics2": str, "naics3": str})
+    # ---- firms: the documented base from 26_build_base.py (all non-government
+    # firms at 500+, flagged). The central base is the headline; the other two
+    # bound it.
+    firms = pd.read_csv(TAB / "taxable_base_2025.csv", dtype={"naics2": str, "naics3": str})
     firms["naics2"] = firms.naics2.fillna("").str.strip().str.replace(r"\.0$", "", regex=True)
     firms["naics3"] = firms.naics3.fillna("").str.strip().str.replace(r"\.0$", "", regex=True)
-    # 10_final_analysis.py filters and reports on emp_all throughout (the raw
-    # component sum); emp_clean zeroes out flagged components and is a
-    # different, smaller quantity. Match 10 exactly so the check below holds.
     emp_col = "emp_all"
     firms["group"] = firms.naics2.map(NAICS_TO_GROUP).fillna("All industries")
     rate = dict(zip(rates.group, rates.wfh_rate))
     firms["wfh_rate"] = firms.group.map(rate)
+    bases = {"central": firms.in_central, "conservative": firms.in_conservative,
+             "upper": pd.Series(True, index=firms.index)}
 
-    legacy = firms[emp_col].sum() * LEGACY_IN_CHICAGO * RATE_MONTHLY * 12 / 1e6
-    log(f"\n=== Check against the previous estimate ===")
-    log(f"  firms {len(firms)}, {emp_col} total {firms[emp_col].sum():,.0f}")
-    log(f"  x old 0.891 factor -> ${legacy:.1f}M  (previous top of range: $153.6M)")
+    log("\n=== Bases (from 26_build_base.py) ===")
+    for b, m in bases.items():
+        log(f"  {b:<13}{int(m.sum()):>5} firms{firms.loc[m, emp_col].sum():>11,.0f} employees")
     log(f"  unmapped sectors (given the all-industry rate): "
         f"{int((firms.group == 'All industries').sum())} firms, "
         f"{firms.loc[firms.group == 'All industries', emp_col].sum():,.0f} employees")
@@ -243,19 +243,23 @@ def main() -> None:
     if ft is not None:
         readings["B: full-time only"] = ft
     rows = []
-    for tier, keep in TIERS:
-        d = firms[keep(firms)]
-        for rname, fts in readings.items():
-            for sname in scenarios:
-                q = d[d[f"qualifies_{sname}"]]
-                covered = q[f"emp_{sname}"].sum() * fts
-                rows.append({"tier": tier, "reading": rname, "scenario": sname,
-                             "firms": len(q), "covered_employees": round(covered),
-                             "revenue_musd": round(covered * RATE_MONTHLY * 12 / 1e6, 1)})
+    for bname, bmask in bases.items():
+        fb = firms[bmask]
+        for tier, keep in TIERS:
+            d = fb[keep(fb)]
+            for rname, fts in readings.items():
+                for sname in scenarios:
+                    q = d[d[f"qualifies_{sname}"]]
+                    covered = q[f"emp_{sname}"].sum() * fts
+                    rows.append({"base": bname, "tier": tier, "reading": rname,
+                                 "scenario": sname, "firms": len(q),
+                                 "covered_employees": round(covered),
+                                 "revenue_musd": round(covered * RATE_MONTHLY * 12 / 1e6, 1)})
     out = pd.DataFrame(rows)
     out.to_csv(TAB / "revenue_remote_adjusted_2025.csv", index=False)
 
-    log("\n=== Revenue, $ millions per year (firms qualifying in brackets) ===")
+    log("\n=== Revenue, $ millions per year, CENTRAL base (firms qualifying in brackets) ===")
+    out_all, out = out, out[out.base == "central"]
     for rname in readings:
         log(f"\n  Reading {rname}")
         log(f"  {'tier':<24}" + "".join(f"{s:>22}" for s in scenarios))
@@ -266,6 +270,14 @@ def main() -> None:
                 cells.append(f"${r.revenue_musd:>6.1f}M ({r.firms:>3})")
             log(f"  {tier:<24}" + "".join(f"{c:>22}" for c in cells))
 
+    log("\n=== Same table on the other two bases: $33, no exemptions, census case ===")
+    for b in bases:
+        for rname in readings:
+            x = out_all[(out_all.base == b) & (out_all.tier == TIERS[0][0])
+                        & (out_all.reading == rname) & (out_all.scenario == "census")].iloc[0]
+            log(f"  {b:<13}{rname:<22}${x.revenue_musd:>6.1f}M ({x.firms} firms)")
+
+    firms = firms[bases["central"]]
     dropped = firms[firms.qualifies_unadjusted & ~firms.qualifies_census]
     log(f"\n  Firms that fall below 500 once remote workers living outside the city are removed: "
         f"{len(dropped)} (central), "

@@ -1,0 +1,15 @@
+scenario,threshold,rate_needed_for_200m,firms,covered_employees
+No exemptions,500,41.1,241,405528
+No exemptions,400,38.3,308,435543
+No exemptions,300,35.6,400,468043
+No exemptions,250,33.7,493,493907
+No exemptions,200,32.2,596,517012
+No exemptions,150,29.6,853,562608
+No exemptions,100,26.9,1313,620403
+Education and health excluded,500,51.3,203,325069
+Education and health excluded,400,47.6,260,350368
+Education and health excluded,300,44.1,339,378195
+Education and health excluded,250,41.6,419,400397
+Education and health excluded,200,39.9,498,418056
+Education and health excluded,150,36.9,685,451335
+Education and health excluded,100,33.9,1008,492237

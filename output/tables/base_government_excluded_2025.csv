@@ -1,0 +1,34 @@
+firm_id,company,naics2,sector,estabs,emp_all,gov_naics,gov_sic,gov_name
+004588000,UI HEALTH,62,Health care,49,5919.0,False,False,True
+801175985,UNITED STATES POSTAL SVC,49,Transport and warehousing,66,5161.0,False,False,True
+754680184,CITY COLLEGES-CHICAGO-HARRY S,61,Education,14,4078.0,False,False,True
+402872899,CITY-CHICAGO STREETS DEPT,23,Construction,1,3500.0,False,False,True
+230153157,CHICAGO TRANSIT AUTHORITY,48,Transport and warehousing,170,3162.0,False,False,True
+003420254,COOK COUNTY DEPT OF CORRECTION,92,Public administration,1,3077.0,True,True,True
+408242873,STATE ATTORNEY,92,Public administration,4,2780.0,True,True,False
+465380327,CHICAGO PUBLIC LIBRARY,51,Information,76,2379.0,False,False,True
+465474104,DEPARTMENT OF HUMAN SVC,92,Public administration,21,2371.0,True,True,False
+470448572,US GENERAL SVC ADMINISTRATION,92,Public administration,2,2013.0,True,True,False
+448894238,JAMES W JARDINE WATER,92,Public administration,1,2000.0,True,True,False
+407357519,CHICAGO TRANSIT AUTHORITY,48,Transport and warehousing,1,1500.0,False,False,True
+426752396,CHICAGO O'HARE INTL AIRPORT,48,Transport and warehousing,1,1301.0,False,False,True
+468172937,US ENVIRONMENTAL PROTCTN AGCY,92,Public administration,1,1300.0,True,True,False
+738420292,CHICAGO STATE UNIVERSITY,61,Education,5,1121.0,False,False,True
+243185816,MCCORMICK PLACE,72,Accommodation and food,1,1001.0,False,False,True
+507800415,METROPOLITAN PIER & EXPOSITION,56,Administrative and support,1,1000.0,False,False,True
+401336347,FISCAL OPERATIONS BUREAU,92,Public administration,1,900.0,True,True,False
+452072770,US ATTORNEY,92,Public administration,17,855.0,True,True,False
+417203445,CLERK-THE CIRCUIT COURT-COOK,92,Public administration,1,800.0,True,True,True
+402883896,ILLINOIS EMPLOYMENT SECURITY,92,Public administration,1,800.0,True,True,False
+425757412,BOARD-TRUSTEES-CMNTY CLG DIST,52,Finance and insurance,1,750.0,False,False,True
+483452413,FANTUS HEALTH CTR-COOK COUNTY,62,Health care,1,750.0,False,False,True
+003848645,CHICAGO TRANSPORTATION DEPT,92,Public administration,1,700.0,True,True,False
+410869524,CHICAGO READ MENTAL HEALTH CTR,62,Health care,1,628.0,False,False,True
+439599489,PROVIDENT HOSPITAL-COOK COUNTY,62,Health care,11,609.0,False,False,True
+416509239,CHICAGO TRANSIT AUTHORITY,48,Transport and warehousing,1,600.0,False,False,True
+465380939,CHICAGO POLICE DEPT,92,Public administration,1,600.0,True,True,True
+417327889,MCCORMICK PLACE,56,Administrative and support,1,500.0,False,False,True
+242688505,DEPARTMENT OF CULTURAL AFFAIRS,71,Arts and recreation,1,500.0,False,False,True
+151251451,LANE TECH HIGH SCHOOL,61,Education,1,500.0,False,False,True
+465419729,CHICAGO POLICE DEPT-5TH DIST,92,Public administration,1,500.0,True,True,True
+465397487,CHICAGO POLICE DEPT,92,Public administration,1,500.0,True,True,True

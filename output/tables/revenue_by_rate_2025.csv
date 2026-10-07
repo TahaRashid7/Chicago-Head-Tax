@@ -1,0 +1,51 @@
+reading,exemptions,firms,rate_per_month,rate_per_year,revenue_musd
+A: every employee,None,218,33,396,141.2
+A: every employee,None,218,40,480,171.2
+A: every employee,None,218,50,600,213.9
+A: every employee,None,218,60,720,256.7
+A: every employee,None,218,75,900,320.9
+A: every employee,Education,208,33,396,130.3
+A: every employee,Education,208,40,480,157.9
+A: every employee,Education,208,50,600,197.4
+A: every employee,Education,208,60,720,236.9
+A: every employee,Education,208,75,900,296.1
+A: every employee,Education and hospitals,193,33,396,114.2
+A: every employee,Education and hospitals,193,40,480,138.4
+A: every employee,Education and hospitals,193,50,600,173.0
+A: every employee,Education and hospitals,193,60,720,207.6
+A: every employee,Education and hospitals,193,75,900,259.5
+A: every employee,Education and all health,183,33,396,105.6
+A: every employee,Education and all health,183,40,480,128.0
+A: every employee,Education and all health,183,50,600,160.0
+A: every employee,Education and all health,183,60,720,192.0
+A: every employee,Education and all health,183,75,900,240.0
+A: every employee,"Education, health, civic and religious",176,33,396,103.2
+A: every employee,"Education, health, civic and religious",176,40,480,125.1
+A: every employee,"Education, health, civic and religious",176,50,600,156.4
+A: every employee,"Education, health, civic and religious",176,60,720,187.6
+A: every employee,"Education, health, civic and religious",176,75,900,234.5
+B: full-time only,None,218,33,396,110.7
+B: full-time only,None,218,40,480,134.2
+B: full-time only,None,218,50,600,167.7
+B: full-time only,None,218,60,720,201.3
+B: full-time only,None,218,75,900,251.6
+B: full-time only,Education,208,33,396,102.2
+B: full-time only,Education,208,40,480,123.9
+B: full-time only,Education,208,50,600,154.8
+B: full-time only,Education,208,60,720,185.8
+B: full-time only,Education,208,75,900,232.3
+B: full-time only,Education and hospitals,193,33,396,89.5
+B: full-time only,Education and hospitals,193,40,480,108.5
+B: full-time only,Education and hospitals,193,50,600,135.6
+B: full-time only,Education and hospitals,193,60,720,162.7
+B: full-time only,Education and hospitals,193,75,900,203.4
+B: full-time only,Education and all health,183,33,396,82.8
+B: full-time only,Education and all health,183,40,480,100.4
+B: full-time only,Education and all health,183,50,600,125.5
+B: full-time only,Education and all health,183,60,720,150.5
+B: full-time only,Education and all health,183,75,900,188.2
+B: full-time only,"Education, health, civic and religious",176,33,396,80.9
+B: full-time only,"Education, health, civic and religious",176,40,480,98.1
+B: full-time only,"Education, health, civic and religious",176,50,600,122.6
+B: full-time only,"Education, health, civic and religious",176,60,720,147.1
+B: full-time only,"Education, health, civic and religious",176,75,900,183.9

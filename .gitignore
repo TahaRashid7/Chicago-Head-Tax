@@ -10,3 +10,11 @@ __pycache__/
 # keep figure PNGs for viewing on GitHub
 !output/figures/*.png
 !output/figures/**/*.png
+
+.DS_Store
+*.aux
+*.log
+*.out
+*.toc
+*.parquet
+*.zip
